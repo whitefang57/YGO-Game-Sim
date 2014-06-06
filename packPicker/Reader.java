@@ -3,13 +3,9 @@ package packPicker;
 import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by Whitefang57 on 6/2/2014.
- */
 public class Reader {
 	public static ArrayList<String> readTrunk() {
 		ArrayList<String> cardsInTrunk = new ArrayList<String>();
@@ -26,17 +22,21 @@ public class Reader {
 		return cardsInTrunk;
 	}
 
-	public static int readUnlocked() {
-		int unlocked = 0;
+	public static ArrayList<Integer> readStats() {
+		ArrayList<Integer> stats = new ArrayList<Integer>();
 		try {
-			FileReader reader = new FileReader("unlocked.txt");
+			FileReader reader = new FileReader("stats.txt");
 			Scanner in = new Scanner(reader);
-			unlocked = in.nextInt();
+			while (in.hasNextLine()) {
+				stats.add(in.nextInt());
+			}
 		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(null, "Unlocked Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);
-			Writer.writeUnlocked(0);
+			JOptionPane.showMessageDialog(null, "Stats Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);
+			ArrayList<Integer> statistics = new ArrayList<Integer>();
+			statistics.add(0);
+			Writer.writeStats(statistics);
 		}
-		return unlocked;
+		return stats;
 	}
 
 	public static ArrayList<String> readPackList() {

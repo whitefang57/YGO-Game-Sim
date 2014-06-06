@@ -8,24 +8,23 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
-/**
- * Created by Whitefang57 on 6/2/2014.
- */
 public class ListBox extends JFrame {
 	private DefaultListModel<String> listModel;
 	private JList<String> list;
 	private JTextField numberOfPacks;
 	private ArrayList<String> fullPackList;
 	private ArrayList<String> cardsInTrunk;
+	private ArrayList<Integer> statistics;
 	private int packsUnlocked;
 	private JButton add;
 	private JButton subtract;
 	private JButton open;
 
-	public ListBox(ArrayList<String> fullPackList, int packsUnlocked, ArrayList<String> cardsInTrunk) {
+	public ListBox(ArrayList<String> fullPackList, ArrayList<Integer> stats, ArrayList<String> cardsInTrunk) {
 		this.fullPackList = fullPackList;
 		this.cardsInTrunk = cardsInTrunk;
-		this.packsUnlocked = packsUnlocked;
+		statistics = stats;
+		packsUnlocked = stats.get(0);
 
 		setTitle("Pick a Pack");
 		setSize(300, 400);
@@ -166,7 +165,7 @@ public class ListBox extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			if (type.equals("+") && packsUnlocked < fullPackList.size()) {
 				packsUnlocked++;
-				Writer.writeUnlocked(packsUnlocked);
+				Writer.writeStats(statistics);
 				listModel.insertElementAt(fullPackList.get(packsUnlocked - 1), packsUnlocked - 1);
 				list.setSelectedIndex(packsUnlocked - 1);
 				list.ensureIndexIsVisible(packsUnlocked - 1);
@@ -174,7 +173,7 @@ public class ListBox extends JFrame {
 
 			if (type.equals("-") && packsUnlocked > 0) {
 				packsUnlocked--;
-				Writer.writeUnlocked(packsUnlocked);
+				Writer.writeStats(statistics);
 				listModel.remove(packsUnlocked);
 				list.setSelectedIndex(packsUnlocked - 1);
 				list.ensureIndexIsVisible(packsUnlocked - 1);
@@ -197,7 +196,7 @@ public class ListBox extends JFrame {
 					i--;
 				}
 			Writer.writeTrunk(cardsInTrunk);
-			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved *10 + " DP", "DP Earned",
+			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved * 10 + " DP", "DP Earned",
 					JOptionPane.INFORMATION_MESSAGE);
 		}
 	}

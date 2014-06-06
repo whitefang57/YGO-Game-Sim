@@ -6,9 +6,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 
-/**
- * Created by Whitefang57 on 6/2/2014.
- */
 public class Writer {
 	public static void writeTrunk(ArrayList<String> cardsInTrunk) {
 		Collections.sort(cardsInTrunk);
@@ -22,13 +19,15 @@ public class Writer {
 		}
 	}
 
-	public static void writeUnlocked(int i) {
+	public static void writeStats(ArrayList<Integer> stats) {
 		try {
-			PrintWriter unlocked = new PrintWriter("unlocked.txt");
-			unlocked.print(i);
+			PrintWriter unlocked = new PrintWriter("stats.txt");
+			for (Integer i : stats) {
+				unlocked.print(i);
+			}
 			unlocked.close();
 		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(null, "Unlocked File Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Stats File Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 
