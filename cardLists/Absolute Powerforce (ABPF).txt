@@ -1,0 +1,100 @@
+R-	Gravekeeper's Priestess
+C-	Unicycular
+C-	Bicular
+C-	Tricular
+R-	Drill Synchron
+R-	Ogre of the Scarlet Sorrow
+R-	Battle Fader
+C-	Power Supplier
+C-	Magic Hole Golem
+C-	Power Invader
+R-	Dark Bug
+C-	Sword Master
+R-	Witch of the Black Rose
+C-	Rose Fairy
+R-	Dragon Queen of Tragic Endings
+C-	Reptilianne Servant
+C-	Reptilianne Gardna
+C-	Reptilianne Naga
+R-	Reptilianne Vaskii
+R-	Oracle of the Sun
+C-	Fire Ant Ascator
+C-	Weeping Idol
+C-	Apocatequil
+C-	Supay
+C-	Informer Spider
+R-	Koa'ki Meiru Urnight
+R-	XX-Saber Garsem
+R-	Gravekeeper's Visionary
+R-	Gravekeeper's Descendant
+C-	Black Potan
+C-	Shreddder
+C-	Pandaborg
+C-	Codarus
+C-	Consecrated Light
+C-	Gundari
+R-	Cyber Dragon Zwei
+C-	Oilman
+R-	Djinn Cursenchanter of Rituals
+R-	Djinn Prognosticator of Rituals
+R-	Garlandolf, King of Destruction
+R-	Majestic Red Dragon
+R-	Drill Warrior
+R-	Sun Dragon Inti
+R-	Moon Dragon Quilla
+R-	XX-Saber Hyunlei
+R-	Cards of Consonance
+C-	Variety Comes Out
+C-	Reptilianne Rage
+C-	Advance Force
+C-	Viper's Rebirth
+C-	Temple of the Sun
+C-	Rocket Pilder
+C-	Break! Draw!
+R-	Power Pickaxe
+C-	Spider's Lair
+R-	Iron Core Specimen Lab
+C-	Gravekeeper's Stele
+C-	Machine Assembly Line
+C-	Ritual of Destruction
+R-	Ascending Soul
+R-	Ritual Cage
+C-	Pot of Benevolence
+R-	Synchro Control
+C-	Changing Destiny
+R-	Fiendish Chain
+C-	Nature's Reflection
+C-	Serpent Suppression
+C-	Meteor Flare
+R-	Offering to the Immortals
+C-	Destruct Potion
+C-	Lair Wire
+C-	Call of the Reaper
+R-	Core Blast
+R-	Saber Hole
+C-	Machine King - 3000 B.C.
+C-	Alien Brain
+C-	Forgotten Temple of the Deep
+R-	Tuner's Scheme
+C-	Psi-Curse
+C-	Widespread Dud
+C-	Inverse Universe
+R-	XX-Saber Emmersblade
+R-	Alchemist of Black Spells
+R-	Super-Nimble Mega Hamster
+R-	Cactus Bouncer
+R-	Dragonic Guard
+R-	The Dragon Dwelling in the Deep
+R-	Djinn Disserere of Rituals
+R-	Earthbound Linewalker
+R-	Core Transport Unit
+R-	Gale Dogra
+R-	Berfomet
+R-	Chimera the Flying Mythical Beast
+R-	Viser Des
+R-	Evil Blast
+R-	Shield Wing
+R-	Underground Arachnid
+R-	Zeman the Ape King
+R-	Skull Conductor
+R-	Shield Worm
