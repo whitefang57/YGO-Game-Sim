@@ -1,0 +1,30 @@
+R-	Blackwing - Gale the Whirlwind
+R-	Blackwing - Bora the Spear
+C-	Blackwing - Blizzard the Far North
+R-	Blackwing - Shura the Blue Flame
+R-	Blackwing - Elphin the Raven
+C-	Blackwing - Mistral the Silver Shield
+C-	Blackwing - Fane the Steel Chain
+C-	Blackwing - Ghibli the Searing Wind
+C-	Blackwing - Gust the Backblast
+R-	Blackwing - Kochi the Daybreak
+R-	Blackwing - Jetstream the Blue Sky
+R-	Blackwing - Zephyros the Elite
+R-	Blackwing Armor Master
+R-	Blackwing Armed Wing
+R-	Blackwing - Silverwind the Ascendant
+R-	Black-Winged Dragon
+C-	Raptor Wing Strike
+C-	Against the Wind
+C-	Black-Winged Strafe
+C-	Cards for Black Feathers
+C-	Ebon Arrow
+C-	Delta Crow - Anti Reverse
+C-	Level Retuner
+C-	Fake Feather
+C-	Blackwing - Backlash
+C-	Blackwing - Bombardment
+C-	Black Thunder
+C-	Guard Mines
+R-	Black Feather Beacon
+R-	Black Return

@@ -1,0 +1,30 @@
+C-	Junk Synchron
+C-	Speed Warrior
+C-	Turbo Booster
+R-	Nitro Synchron
+C-	Quillbolt Hedgehog
+C-	Ghost Gardna
+C-	Shield Warrior
+C-	Healing Wave Generator
+R-	Turbo Synchron
+R-	Fortress Warrior
+R-	Tuningware
+R-	Junk Warrior
+R-	Nitro Warrior
+R-	Stardust Dragon
+R-	Turbo Warrior
+R-	Armory Arm
+C-	Fighting Spirit
+C-	Domino Effect
+C-	Junk Barrage
+C-	Card Rotator
+C-	Equip Shot
+C-	Graceful Revival
+C-	Defense Draw
+C-	Remote Revenge
+R-	Battle Mania
+C-	Confusion Chaff
+R-	Urgent Tuning
+C-	Synchro Strike
+R-	Give and Take
+R-	Limiter Overload
