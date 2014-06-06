@@ -165,6 +165,8 @@ public class ListBox extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			if (type.equals("+") && packsUnlocked < fullPackList.size()) {
 				packsUnlocked++;
+				statistics.remove(0);
+				statistics.add(0, packsUnlocked);
 				Writer.writeStats(statistics);
 				listModel.insertElementAt(fullPackList.get(packsUnlocked - 1), packsUnlocked - 1);
 				list.setSelectedIndex(packsUnlocked - 1);
@@ -173,6 +175,8 @@ public class ListBox extends JFrame {
 
 			if (type.equals("-") && packsUnlocked > 0) {
 				packsUnlocked--;
+				statistics.remove(0);
+				statistics.add(0, packsUnlocked);
 				Writer.writeStats(statistics);
 				listModel.remove(packsUnlocked);
 				list.setSelectedIndex(packsUnlocked - 1);
