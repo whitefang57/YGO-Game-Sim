@@ -1,0 +1,100 @@
+R-	XX-Saber Gardestrike
+R-	Kuribon
+C-	Sunny Pixie
+C-	Sunlight Unicorn
+C-	Blackwing - Mistral the Silver Shield
+R-	Blackwing - Vayu the Emblem of Honor
+C-	Blackwing - Fane the Steel Chain
+C-	Morphtronic Magnen Bar
+R-	Jester Lord
+R-	Jester Confit
+R-	Fortune Lady Light
+R-	Fortune Lady Fire
+C-	Infernity Beast
+R-	Darksea Rescue
+C-	Darksea Float
+R-	Turbo Rocket
+R-	Earthbound Immortal Cusillu
+R-	Earthbound Immortal Chacu Challhua
+C-	Koa'ki Meiru Boulder
+R-	Koa'ki Meiru Crusader
+R-	Koa'ki Meiru Speeder
+R-	Koa'ki Meiru Tornado
+C-	Koa'ki Meiru Hydro Barrier
+C-	Scary Moth
+C-	Shiny Black "C"
+C-	Armed Sea Hunter
+C-	Divine Dragon Aquabizarre
+C-	Fishborg Blaster
+C-	Shark Cruiser
+C-	Armored Axon Kicker
+C-	Genetic Woman
+R-	Magicat
+C-	Cyborg Doctor
+C-	White Potan
+R-	Minefieldriller
+R-	XX-Saber Faultroll
+C-	XX-Saber Ragigura
+R-	Flamvell Firedog
+C-	Ancient Crimson Ape
+R-	Falchionß
+R-	Ancient Fairy Dragon
+R-	Turbo Cannon
+R-	Archfiend Zombie-Skull
+R-	Ancient Sacred Wyvern
+R-	XX-Saber Gottoms
+C-	Release Restraint Wave
+C-	Silver Wing
+C-	Advance Draw
+R-	Ancient Forest
+C-	Emergency Assistance
+C-	Spirit Burner
+R-	Future Visions
+R-	Core Compression
+C-	Core Blaster
+R-	Solidarity
+C-	Hydro Pressure Cannon
+C-	Water Hazard
+C-	Brain Research Lab
+R-	Saber Slash
+C-	Sword of Sparkles
+C-	Rekindling
+C-	Ancient Leaf
+C-	Fossil Dig
+R-	Skill Successor
+R-	Reinforce Truth
+C-	Pixie Ring
+C-	Fairy Wind
+C-	Imperial Custom
+R-	Discord
+C-	Slip of Fortune
+C-	Depth Amulet
+C-	Damage Translation
+C-	Battle Teleportation
+R-	Core Reinforcment
+C-	Iron Core Luster
+C-	Battle of the Elements
+C-	Aegis of the Ocean Dragon Lord
+C-	Psychic Soul
+C-	Flamvell Counter
+C-	At One With the Sword
+C-	A Major Upset
+R-	XX-Saber Fulhelmknight
+R-	Koa'ki Meiru Ghoulungulate
+R-	Koa'ki Meiru Gravirose
+R-	Psychic Emperor
+R-	Card Guard
+R-	Flamvell Commando
+R-	Pseudo Space
+R-	Greed Grado
+R-	Revival of the Immortals
+R-	Arcana Knight Joker
+R-	Armityle the Chaos Phantom
+R-	White Night Dragon
+R-	Card Blocker
+R-	Gaia Plate the Earth Giant
+R-	Sauropod Brachion
+R-	Gaap the Divine Soldier
+R-	Beast Machine King Barbaros Ür
+R-	Kasha
+R-	Elemental Hero Gaia
