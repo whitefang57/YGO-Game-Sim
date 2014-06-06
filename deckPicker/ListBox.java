@@ -26,7 +26,7 @@ public class ListBox extends JFrame {
 		this.deckList = fullDeckList;
 		this.cardsInTrunk = cardsInTrunk;
 		statistics = stats;
-		decksUnlocked = stats.get(0);
+		decksUnlocked = stats.get(1);
 
 		setTitle("Pick a Pack");
 		setSize(300, 400);
