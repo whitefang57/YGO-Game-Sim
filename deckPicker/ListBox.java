@@ -93,48 +93,17 @@ public class ListBox extends JFrame {
 
 	class OpenListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			int packsToOpen = 1;
 			if (list.getSelectedIndex() == -1) {
-				JOptionPane.showMessageDialog(null, "Please Select a Pack", "ERROR", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Please Select a Deck", "ERROR", JOptionPane.WARNING_MESSAGE);
 				return;
 			}
-			ArrayList<String> commonCards = new ArrayList<String>();
-			ArrayList<String> rareCards = new ArrayList<String>();
 
-			for (
-					String s
-					: Reader.readPack(deckList.get(list.getSelectedIndex())))
-
-			{
-				if (s.substring(0, 1).equals("R"))
-					rareCards.add(s.substring(3));
-				else if (s.substring(0, 1).equals("C"))
-					commonCards.add(s.substring(3));
+			for (String s : Reader.readPack(deckList.get(list.getSelectedIndex()))) {
+				cardsInTrunk.add(s);
 			}
 
 			list.clearSelection();
-
-			if (rareCards.size() != 0 && commonCards.size() != 0)
-
-			{
-				for (int i = 0; i < packsToOpen; i++) {
-					String rare = rareCards.get((int) (Math.random() * rareCards.size()));
-					String[] common = new String[]{commonCards.get((int) (Math.random() * commonCards.size())),
-							commonCards.get((int) (Math.random() * commonCards.size())),
-							commonCards.get((int) (Math.random() * commonCards.size())),
-							commonCards.get((int) (Math.random() * commonCards.size()))};
-					cardsInTrunk.add(rare);
-					cardsInTrunk.add(common[0]);
-					cardsInTrunk.add(common[1]);
-					cardsInTrunk.add(common[2]);
-					cardsInTrunk.add(common[3]);
-					JOptionPane.showMessageDialog(null,
-							"You got: \n" + rare + "\n" + common[0] + "\n" + common[1] + "\n" + common[2] + "\n" +
-									common[3], "Pack " + (i + 1), JOptionPane.INFORMATION_MESSAGE
-					);
-				}
-			}
-
+			JOptionPane.showMessageDialog(null, "Cards added to trunk", "", JOptionPane.INFORMATION_MESSAGE);
 			Writer.writeTrunk(cardsInTrunk);
 		}
 	}

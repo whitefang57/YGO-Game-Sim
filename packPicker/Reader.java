@@ -68,7 +68,7 @@ public class Reader {
 	public static ArrayList<String> readPack(String packName) {
 		ArrayList<String> cardsInPack = new ArrayList<String>();
 		try {
-			FileReader reader = new FileReader(packName + ".txt");
+			FileReader reader = new FileReader("cardLists\\" + packName + ".txt");
 			Scanner in = new Scanner(reader);
 			while (in.hasNextLine()) {
 				cardsInPack.add(in.nextLine());
