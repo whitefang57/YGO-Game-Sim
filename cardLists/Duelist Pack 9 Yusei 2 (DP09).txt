@@ -1,0 +1,30 @@
+R-	Stardust Dragon/Assault Mode
+R-	Road Synchron
+R-	Turret Warrior
+C-	Debris Dragon
+C-	Hyper Synchron
+R-	Rockstone Warrior
+C-	Level Warrior
+C-	Majestic Dragon
+R-	Max Warrior
+C-	Quickdraw Synchron
+C-	Level Eater
+C-	Zero Gardna
+R-	Gauntlet Warrior
+R-	Eccentric Boy
+R-	Road Warrior
+R-	Junk Archer
+C-	Prevention Star
+R-	One for One
+C-	Release Restraint Wave
+C-	Silver Wing
+C-	Advance Draw
+C-	Assault Mode Activate
+C-	Spirit Force
+C-	Descending Lost Star
+C-	Miracle Locus
+R-	Skill Successor
+C-	Reinforce Truth
+C-	Slip Summon
+R-	Scrubbed Raid
+R-	Tuner's Barrier

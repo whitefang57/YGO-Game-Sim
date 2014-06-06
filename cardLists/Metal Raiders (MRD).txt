@@ -1,0 +1,144 @@
+R-	Gate Guardian
+C-	Feral Imp
+C-	Winged Dragon, Guardian of the Fortress #1
+R-	Summoned Skull
+C-	Rock Ogre Grotto #1
+C-	Armored Lizard
+C-	Killer Needle
+C-	Larvae Moth
+C-	Harpie Lady
+R-	Harpie Lady Sisters
+C-	Kojikocy
+C-	Cocoon of Evolution
+C-	Crawling Dragon
+C-	Armored Zombie
+R-	Mask of Darkness
+C-	Doma the Angel of Silence
+R-	White Magical Hat
+C-	Big Eye
+R-	B. Skull Dragon
+R-	Masked Sorcerer
+C-	Roaring Ocean Snake
+C-	Water Omotics
+C-	Ground Attacker Bugroth
+C-	Petit Moth
+R-	Elegant Egotist
+R-	Sanga of the Thunder
+R-	Kazejin
+R-	Suijin
+C-	Mystic Lamp
+C-	Steel Scorpion
+C-	Ocubeam
+C-	Leghul
+C-	Ooguchi
+C-	Leogun
+C-	Blast Juggler
+C-	Jinzo #7
+R-	Magician of Faith
+C-	Ancient Elf
+C-	Deapsea Shark
+C-	Bottom Dweller
+C-	Destroyer Golem
+C-	Kaminari Attack
+C-	Rainbow Flower
+C-	Morinphen
+C-	Mega Thunderball
+C-	Tongyo
+C-	Empress Judge
+C-	Pale Beast
+C-	Electric Lizard
+C-	Hunter Spider
+C-	Ancient Lizard Warrior
+C-	Queen's Double
+C-	Trent
+C-	Disk Magician
+C-	Hyosube
+C-	Hibikime
+R-	Fake Trap
+R-	Tribute to the Doomed
+C-	Soul Release
+C-	The Cheerful Coffin
+R-	Change of Heart
+C-	Baby Dragon
+C-	Blackland Fire Dragon
+C-	Swamp Battleguard
+C-	Battle Steer
+R-	Time Wizard
+C-	Saggi the Dark Clown
+C-	Dragon Piper
+C-	Illusionist Faceless Mage
+R-	Sangan
+R-	Great Moth
+R-	Kuriboh
+C-	Jellyfish
+C-	Castle of Dark Illusions
+C-	King of Yamimakai
+R-	Catapult Turtle
+C-	Mystic Horseman
+C-	Rabid Horseman
+C-	Crass Clown
+C-	Pumpking the King of Ghosts
+C-	Dream Clown
+C-	Tainted Wisdom
+C-	Ancient Brain
+C-	Guardian of the Labyrinth
+C-	Prevent Rat
+C-	The Little Swordsman of Aile
+R-	Princess of Tsurugi
+C-	Protector of the Throne
+C-	Tremendous Fire
+C-	Jirai Gumo
+R-	Shadow Ghoul
+C-	Labyrinth Tank
+C-	Ryu-Kishin Powered
+C-	Bickuribox
+C-	Giltia the D. Knight
+C-	Launcher Spider
+C-	Giga-Tech Wolf
+C-	Thunder Dragon
+C-	7 Colored Fish
+C-	The Immortal of Thunder
+C-	Punished Eagle
+C-	Insect Soldiers of the Sky
+C-	Hoshiningen
+C-	Musician King
+C-	Yado Karu
+C-	Cyber Saurus
+R-	Cannon Soldier
+R-	Muka Muka
+C-	The Bistro Butcher
+R-	Star Boy
+R-	Milus Radiant
+C-	Flame Cerebrus
+C-	Niwatori
+R-	Dark Elf
+C-	Mushroom Man #2
+C-	Lava Battleguard
+R-	Witch of the Black Forest
+R-	Little Chimera
+R-	Bladefly
+C-	Lady of Faith
+R-	Twin-Headed Thunder Dragon
+R-	Witch's Apprentice
+C-	Blue-Winged Crown
+C-	Skull Knight
+C-	Gazelle the King of Mythical Beasts
+R-	Garnecia Elefantis
+R-	Barrel Dragon
+R-	Solemn Judgment
+R-	Magic Jammer
+R-	Seven Tools of the Bandit
+R-	Horn of Heaven
+R-	Shield & Sword
+C-	Sword of Deep-Seated
+C-	Block Attack
+C-	The Unhappy Maiden
+R-	Robbin' Goblin
+C-	Germ Infection
+C-	Paralyzing Potion
+R-	Mirror Force
+C-	Ring of Magnetism
+C-	Share the Pain
+C-	Stim-Pack
+R-	Heavy Storm
+R-	Thousand Dragon

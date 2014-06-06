@@ -1,0 +1,30 @@
+R-	Mechanicalchaser
+R-	Axe Raider
+R-	Kwagar Hercules
+R-	Patrol Robo
+R-	White Hole
+R-	Elf's Light
+R-	Steel Shell
+R-	Blue Medicine
+R-	Raimei
+R-	Burning Spear
+R-	Gust Fan
+R-	Tiger Axe
+R-	Goddess with the Third Eye
+R-	Beastking of the Swamps
+R-	Versago the Destroyer
+C-	Wattkid
+C-	Giant Flea
+C-	Bean Soldier
+C-	The Statue of Easter Island
+C-	Corroding Shark
+C-	WOW Warrior
+C-	Winged Dragon, Guardian of the Fortress #2
+C-	Oscillo Hero
+C-	Shining Friendship
+C-	Hercules Beetle
+C-	The Judgement Hand
+C-	Wodan the Resident of the Forest
+C-	Cyber Soldier of the Darkworld
+C-	Cockroach Knight
+C-	Kuwagata Alpha

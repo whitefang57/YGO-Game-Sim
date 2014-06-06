@@ -1,0 +1,105 @@
+R-	Jinzo
+C-	Steel Ogre Grotto #2
+C-	Three-Headed Geedo
+R-	Parasite Paracide
+C-	7 Completed
+R-	Lightforce Sword
+R-	Chain Destruction
+C-	Time Seal
+R-	Graverobber
+C-	Gift of the Mystical Elf
+C-	The Eye of Truth
+R-	Dust Tornado
+R-	Call of the Haunted
+C-	Solomon's Lawbook
+C-	Earthshaker
+C-	Enchanted Javelin
+R-	Mirror Wall
+C-	Gust
+C-	Driving Snow
+C-	Armored Glass
+C-	World Suppression
+C-	Mystic Probe
+C-	Metal Detector
+C-	Numinous Healer
+R-	Appropriate
+R-	Forced Requisition
+C-	DNA Surgery
+C-	The Regulation of Tribe
+R-	Backup Soldier
+C-	Major Riot
+R-	Ceasefire
+C-	Light of Intervention
+C-	Respect Play
+R-	Magical Hats
+R-	Nobleman of Crossout
+R-	Nobleman of Extermination
+R-	The Shallow Grave
+R-	Premature Burial
+C-	Inspection
+R-	Prohibition
+R-	Morphing Jar #2
+C-	Flame Champion
+C-	Twin-Headed Fire Dragon
+C-	Darkfire Soldier #1
+C-	Mr. Volcano
+C-	Darkfire Soldier #2
+C-	Kiseitai
+C-	Cyber Falcon
+C-	Flying Kamakiri #2
+C-	Sky Scout
+R-	Buster Blader
+R-	Michizure
+C-	Minor Goblin Official
+C-	Gamble
+C-	Attack and Receive
+C-	Solemn Wishes
+R-	Skull Invitation
+C-	Bubonic Vermin
+C-	Dark Bat
+C-	Oni Tank T-34
+C-	Overdrive
+C-	Burning Land
+C-	Cold Wave
+R-	Fairy Meteor Crush
+R-	Limiter Removal
+C-	Rain of Mercy
+R-	Monster Recovery
+R-	Shift
+C-	Insect Imitation
+R-	Dimensionhole
+C-	Ground Collapse
+R-	Magic Drain
+C-	Infinite Dismissal
+R-	Gravity Bind
+C-	Type Zero Magic Crusher
+C-	Shadow of Eyes
+R-	The Legendary Fisherman
+C-	Sword Hunter
+C-	Drill Bug
+C-	Deepsea Warrior
+C-	Bite Shoes
+C-	Spikebot
+C-	Invitation to a Dark Sleep
+C-	Thousand-Eyes Idol
+R-	Thousand-Eyes Restrict
+C-	Girochin Kuwagata
+R-	Hayabusa Knight
+C-	Bombardment Beetle
+C-	4-Starred Ladybug of Doom
+C-	Gradius
+R-	Red-Moon Baby
+R-	Mad Sword Beast
+C-	Skull Mariner
+C-	The All-Seeing White Tiger
+R-	Goblin Attack Force
+C-	Island Turtle
+C-	Wingweaver
+C-	Science Soldier
+C-	Souls of the Forgotten
+C-	Dokuroyaiba
+R-	The Fiend Megacyber
+R-	Gearfried the Iron Knight
+C-	Insect Barrier
+R-	Beast of Talwar
+R-	Imperial Order

@@ -1,0 +1,30 @@
+C-	Destiny HERO - Doom Lord
+C-	Destiny HERO - Captain Tenacious
+C-	Destiny HERO - Diamond Dude
+R-	Destiny HERO - Dreadmaster
+R-	Destiny HERO - Double Dude
+R-	Destiny HERO - Defender
+R-	Destiny HERO - Dogma
+C-	Destiny HERO - Blade Master
+R-	Destiny HERO - Fear Monger
+C-	Destiny HERO - Dasher
+R-	Destiny HERO - Malicious
+R-	Elemental HERO Phoenix Enforcer
+R-	Elemental HERO Shining Phoenix Enforcer
+C-	Misfortune
+C-	Guard Penalty
+R-	Clock Tower Prison
+C-	D - Spirit
+C-	Cyclone Blade
+C-	Dark City
+R-	Destiny Draw
+R-	Over Destiny
+C-	Elemental Recharge
+C-	Destruction of Destiny
+C-	Destiny Signal
+C-	D - Time
+C-	D - Shield
+C-	Destiny Mirage
+C-	D - Chain
+R-	D - Counter
+R-	Eternal Dread

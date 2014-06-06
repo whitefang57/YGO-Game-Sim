@@ -1,0 +1,30 @@
+C-	Sonic Chick
+C-	Shield Wing
+C-	Stardust Xiaolong
+C-	Drill Synchron
+C-	Card Breaker
+C-	Second Booster
+R-	Effect Veiler
+C-	Dash Warrior
+C-	Damage Eater
+C-	A/D Changer
+C-	Stronghold Guardian
+R-	Boost Warrior
+R-	Justice Bringer
+R-	Bri Synchron
+R-	Big One Warrior
+R-	Dragon Knight Draco-Equiste
+R-	Majestic Star Dragon
+R-	Drill Warrior
+C-	Cards of Consonance
+C-	Variety Comes Out
+C-	Blind Spot Strike
+C-	Double Cyclone
+R-	Battle Waltz
+R-	Synchro Gift
+R-	Starlight Road
+C-	Synchro Barrier
+C-	Power Frame
+C-	Desperate Tag
+R-	Card of Sacrifice
+R-	Synchro Material

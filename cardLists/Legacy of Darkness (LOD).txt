@@ -1,0 +1,101 @@
+R-	Yata-Garasu
+R-	Dark Ruler Ha Des
+R-	Dark Balter the Terrible
+R-	Lesser Fiend
+C-	Possessed Dark Soul
+C-	Winged Minion
+C-	Skull Knight #2
+C-	Ryu-Kishin Clown
+C-	Twin-Headed Wolf
+R-	Opticlops
+C-	Bark of Dark Ruler
+R-	Fatal Abacus
+C-	Life Absorbing Machine
+C-	The Puppet Magic of Dark Ruler
+C-	Soul Demolition
+C-	Double Snare
+R-	Freed the Matchless General
+C-	Throwstone Unit
+R-	Marauding Captain
+R-	Ryu Senshi
+C-	Warrior Dai Grepher
+C-	Mysterious Guard
+C-	Frontier Wiseman
+R-	Exiled Force
+C-	The Hunter with 7 Weapons
+R-	Shadow Tamer
+C-	Dragon Manipulator
+R-	The A. Forces
+R-	Reinforcement of the Army
+R-	Array of Revealing Light
+R-	The Warrior Returning Alive
+C-	Ready for Intercepting
+C-	A Feint Plan
+C-	Emergency Provisions
+R-	Tyrant Dragon
+R-	Spear Dragon
+C-	Spirit Ryu
+C-	The Dragon Dwelling in the Cave
+C-	Lizard Soldier
+R-	Fiend Skull Dragon
+C-	Cave Dragon
+C-	Grey Wing
+C-	Troop Dragon
+R-	The Dragon's Bead
+C-	A Wingbeat of Giant Dragon
+C-	Dragon's Gunfire
+C-	Stamping Destruction
+C-	Super Rejuvenation
+C-	Dragon's Rage
+C-	Burst Breath
+R-	Luster Dragon #2
+C-	Robotic Knight
+C-	Wolf Axwielder
+C-	The Illusory Gentleman
+C-	Robolady
+C-	Roboyarou
+R-	Fiber Jar
+C-	Serpentine Princess
+C-	Patrician of Darkness
+R-	Thunder Nyan Nyan
+C-	Gradius's Option
+C-	Woodland Sprite
+R-	Airknight Parshath
+R-	Twin-Headed Behemoth
+C-	Maharaghi
+C-	Inaba White Rabbit
+R-	Susa Soldier
+R-	Yamata Dragon
+C-	Great Long Nose
+C-	Otohime
+R-	Hino-Kagu-Tsuchi
+R-	Asura Priest
+C-	Fushi No Tori
+C-	Super Robolady
+C-	Super Roboyarou
+C-	Fengsheng Mirror
+C-	Spring of Rebirth
+C-	Heart of Clear Water
+C-	A Legendary Ocean
+R-	Fusion Sword Murasame Blade
+C-	Smoke Grenade of the Thief
+R-	Creature Swap
+C-	Spiritual Energy Settle Machine
+R-	Second Coin Toss
+C-	Convulsion of Nature
+C-	The Secret of the Bandit
+R-	After Genocide
+R-	Magic Reflector
+R-	Blast with Chain
+C-	Disappear
+C-	Bubble Crash
+R-	Royal Oppression
+R-	Bottomless Trap Hole
+C-	Bad Reaction to Simochi
+C-	Ominous Fortunetelling
+C-	Spirit's Invitation
+C-	Nutrient Z
+R-	Drop Off
+C-	Fiend Comedian
+R-	Last Turn
+R-	Injection Fairy Lily

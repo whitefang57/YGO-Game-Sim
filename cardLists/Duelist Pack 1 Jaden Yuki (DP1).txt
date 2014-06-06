@@ -1,0 +1,30 @@
+C-	Elemental HERO Avian
+C-	Elemental HERO Burstinatrix
+C-	Elemental HERO Clayman
+C-	Elemental HERO Sparkman
+R-	Winged Kuriboh
+R-	Winged Kuriboh LV10
+C-	Wroughtweiler
+C-	Dark Catapulter
+C-	Elemental HERO Bubbleman
+R-	Elemental HERO Flame Wingman
+R-	Elemental HERO Thunder Giant
+R-	Elemental HERO Rampart Blaster
+R-	Elemental HERO Steam Healer
+C-	Polymerization
+C-	Fusion Sage
+C-	The Warrior Returning Alive
+C-	Feather Shot
+C-	Transcendent Wings
+C-	Bubble Shuffle
+C-	Spark Blaster
+R-	Skyscraper
+R-	Burst Return
+R-	Bubble Blaster
+R-	Bubble Illusion
+C-	A Hero Emerges
+C-	Draining Shield
+R-	Negate Attack
+C-	Hero Signal
+R-	Feather Wind
+R-	Clay Charge

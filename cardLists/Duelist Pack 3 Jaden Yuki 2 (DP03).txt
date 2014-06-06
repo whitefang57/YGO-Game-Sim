@@ -1,0 +1,30 @@
+C-	Elemental HERO Neos
+R-	Elemental HERO Bladedge
+C-	Elemental HERO Wildheart
+C-	Hero Kid
+R-	Neo-Spacian Aqua Dolphin
+R-	Neo-Spacian Flare Scarab
+R-	Neo-Spacian Dark Panther
+C-	Chrysalis Dolphin
+R-	Card Trooper
+R-	Elemental HERO Wildedge
+C-	Elemental HERO Wild Wingman
+R-	Elemental HERO Aqua Neos
+R-	Elemental HERO Flare Neos
+R-	Elemental HERO Dark Neos
+C-	Cyclone Boomerang
+C-	H - Heated Heart
+C-	E - Emergency Call
+C-	R - Righteous Justice
+C-	O - Oversoul
+C-	Hero Flash!!
+C-	Contact
+C-	Fake Hero
+C-	Common Soul
+C-	Neo Space
+R-	Light Laser
+R-	Burial from a Different Dimension
+C-	Hero Barrier
+C-	Miracle Kids
+R-	Edge Hammer
+R-	Kid Guard

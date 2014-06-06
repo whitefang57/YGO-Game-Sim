@@ -1,0 +1,19 @@
+R-	Magical Arm Shield
+R-	Harpie's Feather Duster
+R-	Dunames Dark Witch
+R-	Garma Sword
+R-	Zaborg the Thunder Monarch
+R-	Granmarg the Rock Monarch
+R-	Mobius the Frost Monarch
+R-	Thestalos the Firestorm Monarch
+C-	Garma Sword Oath
+C-	Berserk Gorilla
+C-	Ultimate Offering
+C-	Gatekeeper
+C-	Behegon
+C-	Violent Rain
+C-	Temple of Skulls
+C-	Blocker
+C-	Wretched Ghost of the Attic
+C-	Sectarian of Secrets
+C-	Necrolancer the Timelord
