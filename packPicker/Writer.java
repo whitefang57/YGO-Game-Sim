@@ -39,4 +39,13 @@ public class Writer {
 			JOptionPane.showMessageDialog(null, "Pack List Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);
 		}
 	}
+
+	public static void writeDeckList() {
+		try {
+			PrintWriter deckList = new PrintWriter("deckList.txt");
+			deckList.close();
+		} catch (FileNotFoundException e) {
+			JOptionPane.showMessageDialog(null, "Deck List Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);
+		}
+	}
 }

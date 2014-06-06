@@ -51,6 +51,20 @@ public class Reader {
 		return packList;
 	}
 
+	public static ArrayList<String> readDeckList() {
+		ArrayList<String> deckList = new ArrayList<String>();
+		try {
+			FileReader reader = new FileReader("deckList.txt");
+			Scanner in = new Scanner(reader);
+			while (in.hasNextLine()) {
+				deckList.add(in.nextLine());
+			}
+		} catch (FileNotFoundException e) {
+			Writer.writeDeckList();
+		}
+		return deckList;
+	}
+
 	public static ArrayList<String> readPack(String packName) {
 		ArrayList<String> cardsInPack = new ArrayList<String>();
 		try {
