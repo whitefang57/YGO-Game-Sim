@@ -147,28 +147,28 @@ public class ListBox extends JFrame {
 		}
 
 		public void actionPerformed(ActionEvent e) {
-			if (type.equals("+") && packsUnlocked < fullPackList.size()) {
-				packsUnlocked++;
-				statistics.remove(0);
-				statistics.add(0, packsUnlocked);
+			if (type.equals("+") && decksUnlocked < deckList.size()) {
+				decksUnlocked++;
+				statistics.remove(1);
+				statistics.add(1, decksUnlocked);
 				Writer.writeStats(statistics);
-				listModel.insertElementAt(fullPackList.get(packsUnlocked - 1), packsUnlocked - 1);
-				list.setSelectedIndex(packsUnlocked - 1);
-				list.ensureIndexIsVisible(packsUnlocked - 1);
+				listModel.insertElementAt(deckList.get(decksUnlocked - 1), decksUnlocked - 1);
+				list.setSelectedIndex(decksUnlocked - 1);
+				list.ensureIndexIsVisible(decksUnlocked - 1);
 			}
 
-			if (type.equals("-") && packsUnlocked > 0) {
-				packsUnlocked--;
+			if (type.equals("-") && decksUnlocked > 0) {
+				decksUnlocked--;
 				statistics.remove(0);
-				statistics.add(0, packsUnlocked);
+				statistics.add(0, decksUnlocked);
 				Writer.writeStats(statistics);
-				listModel.remove(packsUnlocked);
-				list.setSelectedIndex(packsUnlocked - 1);
-				list.ensureIndexIsVisible(packsUnlocked - 1);
+				listModel.remove(decksUnlocked);
+				list.setSelectedIndex(decksUnlocked - 1);
+				list.ensureIndexIsVisible(decksUnlocked - 1);
 			}
 
-			add.setEnabled(packsUnlocked != fullPackList.size());
-			subtract.setEnabled(packsUnlocked > 0);
+			add.setEnabled(decksUnlocked != deckList.size());
+			subtract.setEnabled(decksUnlocked > 0);
 		}
 	}
 
