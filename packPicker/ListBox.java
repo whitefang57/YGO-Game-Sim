@@ -196,7 +196,7 @@ public class ListBox extends JFrame {
 					i--;
 				}
 			Writer.writeTrunk(cardsInTrunk);
-			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved * 10 + " DP", "DP Earned",
+			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved * 15 + " DP", "DP Earned",
 					JOptionPane.INFORMATION_MESSAGE);
 		}
 	}
