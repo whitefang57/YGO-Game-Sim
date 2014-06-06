@@ -33,7 +33,7 @@ public class Writer {
 
 	public static void writePackList() {
 		try {
-			PrintWriter packList = new PrintWriter("unlocked.txt");
+			PrintWriter packList = new PrintWriter("stats.txt");
 			packList.close();
 		} catch (FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null, "Pack List Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);

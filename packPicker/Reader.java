@@ -16,7 +16,6 @@ public class Reader {
 				cardsInTrunk.add(in.nextLine());
 			}
 		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(null, "Trunk Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);
 			Writer.writeTrunk(cardsInTrunk);
 		}
 		return cardsInTrunk;
@@ -31,7 +30,6 @@ public class Reader {
 				stats.add(in.nextInt());
 			}
 		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(null, "Stats Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);
 			ArrayList<Integer> statistics = new ArrayList<Integer>();
 			statistics.add(0);
 			Writer.writeStats(statistics);
@@ -48,7 +46,7 @@ public class Reader {
 				packList.add(in.nextLine());
 			}
 		} catch (FileNotFoundException e) {
-			JOptionPane.showMessageDialog(null, "Pack List Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);
+			Writer.writePackList();
 		}
 		return packList;
 	}
@@ -63,7 +61,6 @@ public class Reader {
 			}
 		} catch (FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null, "Card List Not Found", "ERROR", JOptionPane.ERROR_MESSAGE);
-			Writer.writePackList();
 		}
 		return cardsInPack;
 	}
