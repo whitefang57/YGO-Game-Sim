@@ -1,0 +1,30 @@
+C-	V-Tiger Jet
+C-	Ojama Green
+C-	Ojama Yellow
+C-	Ojama Black
+C-	X-Head Cannon
+C-	Y-Dragon Head
+C-	Z-Metal Tank
+C-	W-Wing Catapult
+R-	Infernal Incinerator
+C-	Armed Dragon LV3
+C-	Armed Dragon LV5
+R-	Armed Dragon LV7
+R-	Armed Dragon LV10
+R-	XYZ-Dragon Cannon
+C-	Ojama King
+R-	VW-Tiger Catapult
+R-	VWXYZ-Dragon Catapult Cannon
+C-	Ojama Delta Hurricane!!
+R-	Level Modulation
+R-	Ojamagic
+R-	Ojamuscle
+C-	Chthonian Alliance
+C-	Armed Changer
+R-	Magical Mallet
+R-	Inferno Reckless Summon
+R-	Ring of Defense
+C-	Ojama Trio
+C-	Chthonian Blast
+C-	Chthonian Polymer
+R-	The Grave of Enkindling

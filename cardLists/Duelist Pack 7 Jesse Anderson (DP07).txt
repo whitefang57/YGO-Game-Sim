@@ -1,0 +1,25 @@
+C-	Crystal Beast Ruby Carbuncle
+R-	Crystal Beast Amethyst Cat
+C-	Crystal Beast Emerald Tortoise
+R-	Crystal Beast Topaz Tiger
+C-	Crystal Beast Amber Mammoth
+C-	Crystal Beast Cobalt Eagle
+R-	Phantom Skyblaster
+R-	Grave Squirmer
+R-	Grinder Golem
+C-	Magna-Slash Dragon
+C-	Gravi-Crush Dragon
+C-	Twister
+C-	Crystal Beacon
+C-	Crystal Blessing
+R-	Crystal Abundance
+C-	Crystal Promise
+R-	Ancient City - Rainbow Ruins
+R-	Hand Destruction
+R-	Crystal Release
+R-	Crystal Tree
+C-	Triggered Summon
+C-	Last Resort
+C-	Crystal Raigeki
+R-	Crystal Counter
+R-	Crystal Pair

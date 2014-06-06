@@ -1,0 +1,126 @@
+R-	Tri-Horned Dragon
+R-	Blue-Eyes White Dragon
+C-	Hitotsu-Me Giant
+R-	Flame Swordsman
+C-	Skull Servant
+R-	Dark Magician
+R-	Gaia the Fierce Knight
+R-	Celtic Guardian
+C-	Basic Insect
+C-	Mammoth Graveyard
+C-	Silver Fang
+C-	Dark Grey
+C-	Trial of Nightmare
+C-	Nemuriko
+C-	The 13th Grave
+R-	Charubin the Fire Knight
+C-	Flame Manipulator
+C-	Monster Egg
+C-	Firegrass
+R-	Darkfire Dragon
+C-	Dark King of the Abyss
+C-	Fiend Reflection #2
+R-	Fusionist
+C-	Turtle Tiger
+C-	Petit Dragon
+C-	Petit Angel
+C-	Hinotama Soul
+R-	Aqua Madoor
+C-	Kagemusha of the Blue Flame
+R-	Flame Ghost
+C-	Two-Mouth Darkruler
+C-	Dissolverock
+C-	Root Water
+C-	The Furious Sea King
+C-	Green Phantom King
+C-	Ray & Temperature
+C-	King Fog
+C-	Mystical Sheep #2
+C-	Masaki the Legendary Swordsman
+C-	Kurama
+C-	Legendary Sword
+C-	Beast Fangs
+C-	Violet Crystal
+C-	Book of Secret Arts
+C-	Power of Kaishin
+R-	Dragon Capture Jar
+C-	Forest
+C-	Wasteland
+C-	Mountain
+C-	Sogen
+C-	Umi
+C-	Yami
+R-	Dark Hole
+R-	Raigeki
+C-	Red Medicine
+C-	Sparks
+C-	Hinotama
+R-	Fissure
+R-	Trap Hole
+R-	Polymerization
+C-	Remove Trap
+R-	Two-Pronged Attack
+R-	Mystical Elf
+C-	Tyhone
+C-	Beaver Warrior
+R-	Gravedigger Ghoul
+R-	Curse of Dragon
+R-	Karbonala Warrior
+R-	Giant Soldier of Stone
+C-	Uraby
+R-	Red-Eyes B. Dragon
+R-	Reaper of the Cards
+C-	Witty Phantom
+C-	Larvas
+C-	Hard Armor
+C-	Man Eater
+C-	M-Warrior #1
+C-	M-Warrior #2
+R-	Spirit of the Harp
+C-	Armaill
+C-	Terra the Terrible
+C-	Frenzied Panda
+C-	Kumootoko
+C-	Meda Bat
+C-	Enchanting Mermaid
+C-	Fireyarou
+R-	Dragoness the Wicked Knight
+C-	One-Eyed Shield Dragon
+C-	Dark Energy
+C-	Laser Cannon Armor
+C-	Vile Germs
+C-	Silver Bow and Arrow
+C-	Dragon Treasure
+C-	Electro-Whip
+C-	Mystical Moon
+R-	Stop Defense
+C-	Machine Conversion Factory
+C-	Raise Body Heat
+C-	Follow Wind
+R-	Goblin's Secret Remedy
+R-	Final Flame
+R-	Swords of Revealing Light
+R-	Metal Dragon
+C-	Spike Seadra
+C-	Tripwire Beast
+C-	Skull Red Bird
+R-	Armed Ninja
+R-	Flower Wolf
+R-	Man-Eater Bug
+C-	Sand Stone
+R-	Hane-Hane
+C-	Misairuzame
+C-	Steel Ogre Grotto #1
+C-	Lesser Dragon
+C-	Darkworld Thorns
+C-	Drooling Lizard
+C-	Armored Starfish
+C-	Succubus Knight
+R-	Monster Reborn
+R-	Pot of Greed
+R-	Right Leg of the Forbidden One
+R-	Left Leg of the Forbidden One
+R-	Right Arm of the Forbidden One
+R-	Left Arm of the Forbidden One
+R-	Exodia the Forbidden One
+R-	Gaia the Dragon Champion

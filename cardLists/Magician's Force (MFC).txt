@@ -1,0 +1,108 @@
+R-	Dark Magician Girl
+C-	People Running About
+C-	Oppressed People
+C-	United Resistance
+R-	X-Head Cannon
+R-	Y-Dragon Head
+R-	Z-Metal Tank
+R-	Dark Blade
+C-	Pitch-Dark Dragon
+C-	Kiryu
+C-	Decayed Commander
+C-	Zombie Tiger
+C-	Giant Orc
+C-	Second Goblin
+C-	Vampire Orchis
+C-	Des Dendle
+C-	Burning Beast
+C-	Freezing Beast
+C-	Union Rider
+R-	D.D. Crazy Beast
+R-	Spell Canceller
+C-	Neko Mane King
+R-	Helping Robo For Combat
+C-	Dimension Jar
+R-	Great Phantom Thief
+C-	Roulette Barrel
+R-	Paladin of White Dragon
+C-	White Dragon Ritual
+C-	Frontline Base
+C-	Demotion
+R-	Combination Attack
+C-	Kaiser Colosseum
+C-	Autonomous Action Unit
+C-	Poison of the Old Man
+R-	Ante
+R-	Dark Core
+C-	Raregold Armor
+C-	Metalsilver Armor
+C-	Kishido Spirit
+R-	Tribute Doll
+C-	Wave-Motion Cannon
+C-	Huge Revolution
+C-	Thunder of Ruler
+R-	Spell Shield Type-8
+C-	Meteorain
+C-	Pineapple Blast
+C-	Secret Barrel
+C-	Physical Double
+C-	Rivalry of Warlords
+C-	Formation Union
+C-	Adhesion Trap Hole
+R-	XY-Dragon Cannon
+R-	XYZ-Dragon Cannon
+R-	XZ-Tank Cannon
+R-	YZ-Tank Dragon
+C-	Great Angus
+C-	Aitsu
+C-	Sonic Duck
+R-	Luster Dragon
+C-	Amazoness Paladin
+C-	Amazoness Fighter
+R-	Amazoness Swords Woman
+C-	Amazoness Blowpiper
+R-	Amazoness Tiger
+R-	Skilled White Magician
+R-	Skilled Dark Magician
+R-	Apprentice Magician
+C-	Old Vindictive Magician
+R-	Chaos Command Magician
+C-	Magical Marionette
+C-	Pixie Knight
+R-	Breaker the Magical Warrior
+C-	Magical Plant Mandragola
+C-	Magical Scientist
+C-	Royal Magical Library
+R-	Armor Exe
+R-	Tribe-Infecting Virus
+R-	Des Koala
+C-	Cliff the Trap Remover
+C-	Magical Merchant
+C-	Koitsu
+R-	Cat’s Ear Tribe
+C-	Ultimate Obedient Fiend
+C-	Dark Cat with White Tail
+C-	Amazoness Spellcaster
+R-	Continuous Destruction Punch
+R-	Big Bang Shot
+C-	Gather Your Mind
+C-	Mass Driver
+C-	Senri Eye
+C-	Emblem of Dragon Destroyer
+C-	Jar Robber
+C-	My Body as a Shield
+C-	Pigeonholing Books of Spell
+R-	Mega Ton Magical Cannon
+C-	Pitch-Black Power Stone
+R-	Amazoness Archers
+R-	Dramatic Rescue
+C-	Exhausting Spell
+C-	Hidden Book of Spell
+C-	Miracle Restoring
+C-	Remove Brainwashing
+C-	Disarmament
+C-	Anti-Spell
+C-	The Spell Absorbing Life
+R-	Dark Paladin
+R-	Double Spell
+R-	Diffusion Wave-Motion
