@@ -19,12 +19,14 @@ public class ListBox extends JFrame {
 	private JButton add;
 	private JButton subtract;
 	private JButton open;
+	private int duelPoints;
 
 	public ListBox(ArrayList<String> fullPackList, ArrayList<Integer> stats, ArrayList<String> cardsInTrunk) {
 		this.fullPackList = fullPackList;
 		this.cardsInTrunk = cardsInTrunk;
 		statistics = stats;
 		packsUnlocked = stats.get(0);
+		duelPoints = stats.get(2);
 
 		setTitle("Pick a Pack");
 		setSize(300, 400);
