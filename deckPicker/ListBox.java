@@ -22,6 +22,7 @@ public class ListBox extends JFrame {
 	private JButton subtract;
 	private JButton open;
 	private int duelPoints;
+	private JLabel duelPointDisplay;
 
 	public ListBox(ArrayList<String> fullDeckList, ArrayList<Integer> stats, ArrayList<String> cardsInTrunk) {
 		this.deckList = fullDeckList;
@@ -56,6 +57,7 @@ public class ListBox extends JFrame {
 		add = new JButton("+");
 		subtract = new JButton("-");
 		JButton clean = new JButton("Clean Trunk");
+		duelPointDisplay = new JLabel("DP: " + duelPoints);
 
 		open.addActionListener(new OpenListener());
 		add.addActionListener(new UnlockListener(add));
@@ -79,7 +81,10 @@ public class ListBox extends JFrame {
 
 		JPanel buttonPaneTwo = new JPanel();
 		buttonPaneOne.setLayout(new BoxLayout(buttonPaneOne, BoxLayout.LINE_AXIS));
+
 		buttonPaneTwo.add(clean);
+		Spacer.addSpace(buttonPaneTwo);
+		buttonPaneTwo.add(duelPointDisplay);
 
 		panel.add(buttonPaneTwo, BorderLayout.PAGE_START);
 		buttonPaneOne.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
@@ -100,13 +105,22 @@ public class ListBox extends JFrame {
 				return;
 			}
 
-			for (String s : Reader.readPack(deckList.get(list.getSelectedIndex()))) {
-				cardsInTrunk.add(s);
-			}
+			if (1500 > duelPoints) {
+				JOptionPane.showMessageDialog(null, "Not Enough DP", "ERROR",
+						JOptionPane.WARNING_MESSAGE);
+			} else {
+				for (String s : Reader.readPack(deckList.get(list.getSelectedIndex()))) {
+					cardsInTrunk.add(s);
+				}
 
-			list.clearSelection();
-			JOptionPane.showMessageDialog(null, "Cards added to trunk", "", JOptionPane.INFORMATION_MESSAGE);
-			Writer.writeTrunk(cardsInTrunk);
+				list.clearSelection();
+				duelPoints -= 1500;
+				statistics.set(2, duelPoints);
+				Writer.writeStats(statistics);
+				duelPointDisplay.setText("DP: " + duelPoints);
+				JOptionPane.showMessageDialog(null, "Cards added to trunk", "", JOptionPane.INFORMATION_MESSAGE);
+				Writer.writeTrunk(cardsInTrunk);
+			}
 		}
 	}
 
@@ -120,8 +134,7 @@ public class ListBox extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			if (type.equals("+") && decksUnlocked < deckList.size()) {
 				decksUnlocked++;
-				statistics.remove(1);
-				statistics.add(1, decksUnlocked);
+				statistics.set(1, decksUnlocked);
 				Writer.writeStats(statistics);
 				listModel.insertElementAt(deckList.get(decksUnlocked - 1), decksUnlocked - 1);
 				list.setSelectedIndex(decksUnlocked - 1);
@@ -130,8 +143,7 @@ public class ListBox extends JFrame {
 
 			if (type.equals("-") && decksUnlocked > 0) {
 				decksUnlocked--;
-				statistics.remove(0);
-				statistics.add(0, decksUnlocked);
+				statistics.set(1, decksUnlocked);
 				Writer.writeStats(statistics);
 				listModel.remove(decksUnlocked);
 				list.setSelectedIndex(decksUnlocked - 1);
@@ -155,8 +167,12 @@ public class ListBox extends JFrame {
 					i--;
 				}
 			Writer.writeTrunk(cardsInTrunk);
-			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved * 15 + " DP", "DP Earned",
+			duelPoints += cardsRemoved * 20;
+			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved * 20 + " DP", "DP Earned",
 					JOptionPane.INFORMATION_MESSAGE);
+			statistics.set(2, duelPoints);
+			duelPointDisplay.setText("DP: " + duelPoints);
+			Writer.writeStats(statistics);
 		}
 	}
 

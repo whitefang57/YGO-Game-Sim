@@ -22,8 +22,11 @@ public class Writer {
 	public static void writeStats(ArrayList<Integer> stats) {
 		try {
 			PrintWriter unlocked = new PrintWriter("stats.txt");
-			for (Integer i : stats) {
-				unlocked.print(i);
+			for (int i = 0; i < stats.size(); i++) {
+				if (i != stats.size() - 1)
+					unlocked.println(stats.get(i));
+				else
+					unlocked.print(stats.get(i));
 			}
 			unlocked.close();
 		} catch (FileNotFoundException e) {

@@ -20,6 +20,7 @@ public class ListBox extends JFrame {
 	private JButton subtract;
 	private JButton open;
 	private int duelPoints;
+	private JLabel duelPointDisplay;
 
 	public ListBox(ArrayList<String> fullPackList, ArrayList<Integer> stats, ArrayList<String> cardsInTrunk) {
 		this.fullPackList = fullPackList;
@@ -55,6 +56,7 @@ public class ListBox extends JFrame {
 		add = new JButton("+");
 		subtract = new JButton("-");
 		JButton clean = new JButton("Clean Trunk");
+		duelPointDisplay = new JLabel("DP: " + duelPoints);
 
 		open.addActionListener(new OpenListener());
 		numberOfPacks.addActionListener(new OpenListener());
@@ -81,7 +83,10 @@ public class ListBox extends JFrame {
 
 		JPanel buttonPaneTwo = new JPanel();
 		buttonPaneOne.setLayout(new BoxLayout(buttonPaneOne, BoxLayout.LINE_AXIS));
+
 		buttonPaneTwo.add(clean);
+		Spacer.addSpace(buttonPaneTwo);
+		buttonPaneTwo.add(duelPointDisplay);
 
 		panel.add(buttonPaneTwo, BorderLayout.PAGE_START);
 		buttonPaneOne.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
@@ -116,40 +121,49 @@ public class ListBox extends JFrame {
 						return;
 					}
 				} catch (NumberFormatException n) {
-					JOptionPane
-							.showMessageDialog(null, "Please Enter a Valid Number", "ERROR",
-									JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Please Enter a Valid Number", "ERROR",
+							JOptionPane.WARNING_MESSAGE);
 					return;
 				}
 			}
-			ArrayList<String> commonCards = new ArrayList<String>();
-			ArrayList<String> rareCards = new ArrayList<String>();
+			if (packsToOpen * 150 > duelPoints) {
+				JOptionPane.showMessageDialog(null, "Not Enough DP", "ERROR",
+						JOptionPane.WARNING_MESSAGE);
+			} else {
+				duelPoints -= packsToOpen * 150;
+				statistics.set(2, duelPoints);
+				Writer.writeStats(statistics);
+				duelPointDisplay.setText("DP: " + duelPoints);
 
-			for (String s : Reader.readPack(fullPackList.get(list.getSelectedIndex()))) {
-				if (s.substring(0, 1).equals("R"))
-					rareCards.add(s.substring(3));
-				else if (s.substring(0, 1).equals("C"))
-					commonCards.add(s.substring(3));
-			}
+				ArrayList<String> commonCards = new ArrayList<String>();
+				ArrayList<String> rareCards = new ArrayList<String>();
 
-			list.clearSelection();
+				for (String s : Reader.readPack(fullPackList.get(list.getSelectedIndex()))) {
+					if (s.substring(0, 1).equals("R"))
+						rareCards.add(s.substring(3));
+					else if (s.substring(0, 1).equals("C"))
+						commonCards.add(s.substring(3));
+				}
 
-			if (rareCards.size() != 0 && commonCards.size() != 0) {
-				for (int i = 0; i < packsToOpen; i++) {
-					String rare = rareCards.get((int) (Math.random() * rareCards.size()));
-					String[] common = new String[]{commonCards.get((int) (Math.random() * commonCards.size())),
-							commonCards.get((int) (Math.random() * commonCards.size())),
-							commonCards.get((int) (Math.random() * commonCards.size())),
-							commonCards.get((int) (Math.random() * commonCards.size()))};
-					cardsInTrunk.add(rare);
-					cardsInTrunk.add(common[0]);
-					cardsInTrunk.add(common[1]);
-					cardsInTrunk.add(common[2]);
-					cardsInTrunk.add(common[3]);
-					JOptionPane.showMessageDialog(null,
-							"You got: \n" + rare + "\n" + common[0] + "\n" + common[1] + "\n" + common[2] + "\n" +
-									common[3], "Pack " + (i + 1), JOptionPane.INFORMATION_MESSAGE
-					);
+				list.clearSelection();
+
+				if (rareCards.size() != 0 && commonCards.size() != 0) {
+					for (int i = 0; i < packsToOpen; i++) {
+						String rare = rareCards.get((int) (Math.random() * rareCards.size()));
+						String[] common = new String[]{commonCards.get((int) (Math.random() * commonCards.size())),
+								commonCards.get((int) (Math.random() * commonCards.size())),
+								commonCards.get((int) (Math.random() * commonCards.size())),
+								commonCards.get((int) (Math.random() * commonCards.size()))};
+						cardsInTrunk.add(rare);
+						cardsInTrunk.add(common[0]);
+						cardsInTrunk.add(common[1]);
+						cardsInTrunk.add(common[2]);
+						cardsInTrunk.add(common[3]);
+						JOptionPane.showMessageDialog(null,
+								"You got: \n" + rare + "\n" + common[0] + "\n" + common[1] + "\n" + common[2] + "\n" +
+										common[3], "Pack " + (i + 1), JOptionPane.INFORMATION_MESSAGE
+						);
+					}
 				}
 			}
 
@@ -167,8 +181,7 @@ public class ListBox extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			if (type.equals("+") && packsUnlocked < fullPackList.size()) {
 				packsUnlocked++;
-				statistics.remove(0);
-				statistics.add(0, packsUnlocked);
+				statistics.set(0, packsUnlocked);
 				Writer.writeStats(statistics);
 				listModel.insertElementAt(fullPackList.get(packsUnlocked - 1), packsUnlocked - 1);
 				list.setSelectedIndex(packsUnlocked - 1);
@@ -202,8 +215,12 @@ public class ListBox extends JFrame {
 					i--;
 				}
 			Writer.writeTrunk(cardsInTrunk);
-			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved * 15 + " DP", "DP Earned",
+			duelPoints += cardsRemoved * 20;
+			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved * 20 + " DP", "DP Earned",
 					JOptionPane.INFORMATION_MESSAGE);
+			statistics.set(2, duelPoints);
+			duelPointDisplay.setText("DP: " + duelPoints);
+			Writer.writeStats(statistics);
 		}
 	}
 
