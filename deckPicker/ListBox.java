@@ -33,6 +33,7 @@ public class ListBox extends JFrame {
 
 		setTitle("Pick a Pack");
 		setSize(300, 400);
+		setLocationRelativeTo(null);
 		JPanel panel = new JPanel();
 		panel.setLayout(new BorderLayout());
 		getContentPane().add(panel);
@@ -80,7 +81,7 @@ public class ListBox extends JFrame {
 		buttonPaneOne.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
 		JPanel buttonPaneTwo = new JPanel();
-		buttonPaneOne.setLayout(new BoxLayout(buttonPaneOne, BoxLayout.LINE_AXIS));
+		buttonPaneTwo.setLayout(new BoxLayout(buttonPaneTwo, BoxLayout.LINE_AXIS));
 
 		buttonPaneTwo.add(clean);
 		Spacer.addSpace(buttonPaneTwo);

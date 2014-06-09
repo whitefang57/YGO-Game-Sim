@@ -31,6 +31,7 @@ public class ListBox extends JFrame {
 
 		setTitle("Pick a Pack");
 		setSize(300, 400);
+		setLocationRelativeTo(null);
 		JPanel panel = new JPanel();
 		panel.setLayout(new BorderLayout());
 		getContentPane().add(panel);
