@@ -1,4 +1,4 @@
-package packPicker;
+package ygo;
 
 import javax.swing.*;
 import java.io.FileNotFoundException;
@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Reader {
+public class YGOReader {
 	public static ArrayList<String> readTrunk() {
 		ArrayList<String> cardsInTrunk = new ArrayList<String>();
 		try {
@@ -16,7 +16,7 @@ public class Reader {
 				cardsInTrunk.add(in.nextLine());
 			}
 		} catch (FileNotFoundException e) {
-			Writer.writeTrunk(cardsInTrunk);
+			YGOWriter.writeTrunk(cardsInTrunk);
 		}
 		return cardsInTrunk;
 	}
@@ -32,7 +32,7 @@ public class Reader {
 		} catch (FileNotFoundException e) {
 			ArrayList<Integer> statistics = new ArrayList<Integer>();
 			statistics.add(0);
-			Writer.writeStats(statistics);
+			YGOWriter.writeStats(statistics);
 		}
 		return stats;
 	}
@@ -46,7 +46,7 @@ public class Reader {
 				packList.add(in.nextLine());
 			}
 		} catch (FileNotFoundException e) {
-			Writer.writePackList();
+			YGOWriter.writePackList();
 		}
 		return packList;
 	}
@@ -60,7 +60,7 @@ public class Reader {
 				deckList.add(in.nextLine());
 			}
 		} catch (FileNotFoundException e) {
-			Writer.writeDeckList();
+			YGOWriter.writeDeckList();
 		}
 		return deckList;
 	}

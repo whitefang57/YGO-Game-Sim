@@ -1,4 +1,4 @@
-package packPicker;
+package ygo;
 
 import javax.swing.*;
 import java.io.FileNotFoundException;
@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Writer {
+public class YGOWriter {
 	public static void writeTrunk(ArrayList<String> cardsInTrunk) {
 		Collections.sort(cardsInTrunk);
 		try {

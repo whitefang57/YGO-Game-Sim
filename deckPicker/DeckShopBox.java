@@ -1,8 +1,9 @@
 package deckPicker;
 
 import mainMenu.MenuBox;
-import packPicker.Reader;
-import packPicker.Writer;
+import ygo.YGOReader;
+import ygo.YGOWriter;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,9 +24,9 @@ public class DeckShopBox extends JFrame {
 	private JLabel duelPointDisplay;
 
 	public DeckShopBox() {
-		deckList = Reader.readDeckList();
-		cardsInTrunk = Reader.readTrunk();
-		statistics = Reader.readStats();
+		deckList = YGOReader.readDeckList();
+		cardsInTrunk = YGOReader.readTrunk();
+		statistics = YGOReader.readStats();
 		//0 is unlocked packs, 1 is unlocked decks, 2 is total dp,
 		decksUnlocked = statistics.get(1);
 		duelPoints = statistics.get(2);
@@ -113,17 +114,17 @@ public class DeckShopBox extends JFrame {
 				JOptionPane.showMessageDialog(null, "Not Enough DP", "ERROR",
 						JOptionPane.WARNING_MESSAGE);
 			} else {
-				for (String s : Reader.readPack(deckList.get(list.getSelectedIndex()))) {
+				for (String s : YGOReader.readPack(deckList.get(list.getSelectedIndex()))) {
 					cardsInTrunk.add(s);
 				}
 
 				list.clearSelection();
 				duelPoints -= 1500;
 				statistics.set(2, duelPoints);
-				Writer.writeStats(statistics);
+				YGOWriter.writeStats(statistics);
 				duelPointDisplay.setText("DP: " + duelPoints);
 				JOptionPane.showMessageDialog(null, "Cards added to trunk", "", JOptionPane.INFORMATION_MESSAGE);
-				Writer.writeTrunk(cardsInTrunk);
+				YGOWriter.writeTrunk(cardsInTrunk);
 			}
 		}
 	}
@@ -139,7 +140,7 @@ public class DeckShopBox extends JFrame {
 			if (type.equals("+") && decksUnlocked < deckList.size()) {
 				decksUnlocked++;
 				statistics.set(1, decksUnlocked);
-				Writer.writeStats(statistics);
+				YGOWriter.writeStats(statistics);
 				listModel.insertElementAt(deckList.get(decksUnlocked - 1), decksUnlocked - 1);
 				list.setSelectedIndex(decksUnlocked - 1);
 				list.ensureIndexIsVisible(decksUnlocked - 1);
@@ -148,7 +149,7 @@ public class DeckShopBox extends JFrame {
 			if (type.equals("-") && decksUnlocked > 0) {
 				decksUnlocked--;
 				statistics.set(1, decksUnlocked);
-				Writer.writeStats(statistics);
+				YGOWriter.writeStats(statistics);
 				listModel.remove(decksUnlocked);
 				list.setSelectedIndex(decksUnlocked - 1);
 				list.ensureIndexIsVisible(decksUnlocked - 1);
@@ -170,13 +171,13 @@ public class DeckShopBox extends JFrame {
 					cardsRemoved++;
 					i--;
 				}
-			Writer.writeTrunk(cardsInTrunk);
+			YGOWriter.writeTrunk(cardsInTrunk);
 			duelPoints += cardsRemoved * 20;
 			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved * 20 + " DP", "DP Earned",
 					JOptionPane.INFORMATION_MESSAGE);
 			statistics.set(2, duelPoints);
 			duelPointDisplay.setText("DP: " + duelPoints);
-			Writer.writeStats(statistics);
+			YGOWriter.writeStats(statistics);
 		}
 	}
 
