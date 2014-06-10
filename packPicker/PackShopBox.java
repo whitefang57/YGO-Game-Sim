@@ -1,14 +1,13 @@
 package packPicker;
 
+import mainMenu.MenuBox;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.util.ArrayList;
 
-public class ListBox extends JFrame {
+public class PackShopBox extends JFrame {
 	private DefaultListModel<String> listModel;
 	private JList<String> list;
 	private JTextField numberOfPacks;
@@ -22,12 +21,13 @@ public class ListBox extends JFrame {
 	private int duelPoints;
 	private JLabel duelPointDisplay;
 
-	public ListBox(ArrayList<String> fullPackList, ArrayList<Integer> stats, ArrayList<String> cardsInTrunk) {
-		this.fullPackList = fullPackList;
-		this.cardsInTrunk = cardsInTrunk;
-		statistics = stats;
-		packsUnlocked = stats.get(0);
-		duelPoints = stats.get(2);
+	public PackShopBox() {
+		fullPackList = Reader.readPackList();
+		cardsInTrunk = Reader.readTrunk();
+		statistics = Reader.readStats();
+		//0 is unlocked packs, 1 is unlocked decks, 2 is total dp,
+		packsUnlocked = statistics.get(0);
+		duelPoints = statistics.get(2);
 
 		setTitle("Pick a Pack");
 		setSize(300, 400);
@@ -65,11 +65,18 @@ public class ListBox extends JFrame {
 		subtract.addActionListener(new UnlockListener(subtract));
 		clean.addActionListener(new CleanListener());
 
+		open.setAlignmentX(JButton.CENTER_ALIGNMENT);
+		numberOfPacks.setAlignmentX(JButton.CENTER_ALIGNMENT);
+		add.setAlignmentX(JButton.CENTER_ALIGNMENT);
+		subtract.setAlignmentX(JButton.CENTER_ALIGNMENT);
+		clean.setAlignmentX(JButton.CENTER_ALIGNMENT);
+		duelPointDisplay.setAlignmentX(JLabel.CENTER_ALIGNMENT);
+
 		add.setEnabled(packsUnlocked != fullPackList.size());
 		subtract.setEnabled(packsUnlocked > 0);
+		numberOfPacks.setPreferredSize(new Dimension(25, 25));
 
 		JPanel buttonPaneOne = new JPanel();
-		buttonPaneOne.setLayout(new BoxLayout(buttonPaneOne, BoxLayout.LINE_AXIS));
 
 		buttonPaneOne.add(open);
 		Spacer.addSpace(buttonPaneOne);
@@ -80,17 +87,22 @@ public class ListBox extends JFrame {
 		buttonPaneOne.add(subtract);
 
 		panel.add(buttonPaneOne, BorderLayout.PAGE_END);
-		buttonPaneOne.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
 		JPanel buttonPaneTwo = new JPanel();
-		buttonPaneOne.setLayout(new BoxLayout(buttonPaneOne, BoxLayout.LINE_AXIS));
 
 		buttonPaneTwo.add(clean);
 		Spacer.addSpace(buttonPaneTwo);
 		buttonPaneTwo.add(duelPointDisplay);
 
 		panel.add(buttonPaneTwo, BorderLayout.PAGE_START);
-		buttonPaneOne.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				MenuBox frame = new MenuBox();
+				frame.setVisible(true);
+				frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+			}
+		});
 	}
 
 	class DoubleClickListener extends MouseAdapter {
@@ -227,8 +239,6 @@ public class ListBox extends JFrame {
 
 	static class Spacer {
 		public static void addSpace(JPanel buttonPane) {
-			buttonPane.add(Box.createHorizontalStrut(5));
-			buttonPane.add(new JSeparator(SwingConstants.VERTICAL));
 			buttonPane.add(Box.createHorizontalStrut(5));
 		}
 	}
