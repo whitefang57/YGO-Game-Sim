@@ -4,7 +4,6 @@ import mainMenu.MenuBox;
 import ygoUtil.YGOReader;
 import ygoUtil.YGOWriter;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -28,7 +27,8 @@ public class DeckShopBox extends JFrame {
 		cardsInTrunk = YGOReader.readTrunk();
 		statistics = YGOReader.readStats();
 		//0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses
-		decksUnlocked = statistics.get(1);
+		decksUnlocked = PacksUnlockedToDecksUnlocked.swap(statistics.get(0));
+		statistics.set(1, decksUnlocked);
 		duelPoints = statistics.get(2);
 
 		setTitle("Pick a Pack");
@@ -85,6 +85,7 @@ public class DeckShopBox extends JFrame {
 		buttonPaneTwo.add(duelPointDisplay);
 
 		panel.add(buttonPaneTwo, BorderLayout.PAGE_START);
+		YGOWriter.writeStats(statistics);
 
 		addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
@@ -178,6 +179,83 @@ public class DeckShopBox extends JFrame {
 			statistics.set(2, duelPoints);
 			duelPointDisplay.setText("DP: " + duelPoints);
 			YGOWriter.writeStats(statistics);
+		}
+	}
+
+	static class PacksUnlockedToDecksUnlocked {
+		public static int swap(int packsUnlocked) {
+			if (packsUnlocked >= 100) {
+				return 43;
+			} else if (packsUnlocked >= 99) {
+				return 42;
+			} else if (packsUnlocked >= 98) {
+				return 40;
+			} else if (packsUnlocked >= 96) {
+				return 39;
+			} else if (packsUnlocked >= 93) {
+				return 38;
+			} else if (packsUnlocked >= 91) {
+				return 37;
+			} else if (packsUnlocked >= 89) {
+				return 36;
+			} else if (packsUnlocked >= 87) {
+				return 35;
+			} else if (packsUnlocked >= 86) {
+				return 34;
+			} else if (packsUnlocked >= 82) {
+				return 33;
+			} else if (packsUnlocked >= 80) {
+				return 32;
+			} else if (packsUnlocked >= 76) {
+				return 30;
+			} else if (packsUnlocked >= 70) {
+				return 29;
+			} else if (packsUnlocked >= 67) {
+				return 28;
+			} else if (packsUnlocked >= 65) {
+				return 27;
+			} else if (packsUnlocked >= 60) {
+				return 26;
+			} else if (packsUnlocked >= 57) {
+				return 25;
+			} else if (packsUnlocked >= 56) {
+				return 24;
+			} else if (packsUnlocked >= 52) {
+				return 23;
+			} else if (packsUnlocked >= 50) {
+				return 22;
+			} else if (packsUnlocked >= 47) {
+				return 21;
+			} else if (packsUnlocked >= 42) {
+				return 20;
+			} else if (packsUnlocked >= 39) {
+				return 19;
+			} else if (packsUnlocked >= 32) {
+				return 17;
+			} else if (packsUnlocked >= 30) {
+				return 16;
+			} else if (packsUnlocked >= 29) {
+				return 15;
+			} else if (packsUnlocked >= 28) {
+				return 14;
+			} else if (packsUnlocked >= 27) {
+				return 13;
+			} else if (packsUnlocked >= 24) {
+				return 12;
+			} else if (packsUnlocked >= 22) {
+				return 11;
+			} else if (packsUnlocked >= 19) {
+				return 10;
+			} else if (packsUnlocked >= 18) {
+				return 8;
+			} else if (packsUnlocked >= 14) {
+				return 6;
+			} else if (packsUnlocked >= 8) {
+				return 4;
+			} else if (packsUnlocked >= 1) {
+				return 2;
+			}
+			return 0;
 		}
 	}
 }
