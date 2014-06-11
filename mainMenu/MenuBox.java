@@ -1,7 +1,8 @@
 package mainMenu;
 
-import deckPicker.DeckShopBox;
-import packPicker.PackShopBox;
+import buttonBox.DeckShopBox;
+import buttonBox.DuelWinLossBox;
+import buttonBox.PackShopBox;
 
 import javax.swing.*;
 import java.awt.*;
@@ -69,6 +70,9 @@ public class MenuBox extends JFrame {
 
 	class DuelListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
+			DuelWinLossBox frame = new DuelWinLossBox();
+			frame.setVisible(true);
+			frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 			dispose();
 		}
 	}

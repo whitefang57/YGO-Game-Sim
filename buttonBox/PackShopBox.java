@@ -1,8 +1,8 @@
-package packPicker;
+package buttonBox;
 
 import mainMenu.MenuBox;
-import ygo.YGOReader;
-import ygo.YGOWriter;
+import ygoUtil.YGOReader;
+import ygoUtil.YGOWriter;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,7 +27,7 @@ public class PackShopBox extends JFrame {
 		fullPackList = YGOReader.readPackList();
 		cardsInTrunk = YGOReader.readTrunk();
 		statistics = YGOReader.readStats();
-		//0 is unlocked packs, 1 is unlocked decks, 2 is total dp,
+		//0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses
 		packsUnlocked = statistics.get(0);
 		duelPoints = statistics.get(2);
 
@@ -81,11 +81,11 @@ public class PackShopBox extends JFrame {
 		JPanel buttonPaneOne = new JPanel();
 
 		buttonPaneOne.add(open);
-		Spacer.addSpace(buttonPaneOne);
+		buttonPaneOne.add(Box.createHorizontalStrut(5));
 		buttonPaneOne.add(numberOfPacks);
-		Spacer.addSpace(buttonPaneOne);
+		buttonPaneOne.add(Box.createHorizontalStrut(5));
 		buttonPaneOne.add(add);
-		Spacer.addSpace(buttonPaneOne);
+		buttonPaneOne.add(Box.createHorizontalStrut(5));
 		buttonPaneOne.add(subtract);
 
 		panel.add(buttonPaneOne, BorderLayout.PAGE_END);
@@ -93,7 +93,7 @@ public class PackShopBox extends JFrame {
 		JPanel buttonPaneTwo = new JPanel();
 
 		buttonPaneTwo.add(clean);
-		Spacer.addSpace(buttonPaneTwo);
+		buttonPaneTwo.add(Box.createHorizontalStrut(5));
 		buttonPaneTwo.add(duelPointDisplay);
 
 		panel.add(buttonPaneTwo, BorderLayout.PAGE_START);
@@ -236,12 +236,6 @@ public class PackShopBox extends JFrame {
 			statistics.set(2, duelPoints);
 			duelPointDisplay.setText("DP: " + duelPoints);
 			YGOWriter.writeStats(statistics);
-		}
-	}
-
-	static class Spacer {
-		public static void addSpace(JPanel buttonPane) {
-			buttonPane.add(Box.createHorizontalStrut(5));
 		}
 	}
 }

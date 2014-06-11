@@ -1,4 +1,4 @@
-package ygo;
+package ygoUtil;
 
 import javax.swing.*;
 import java.io.FileNotFoundException;
