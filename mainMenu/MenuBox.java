@@ -1,5 +1,6 @@
 package mainMenu;
 
+import buttonBox.DeckEditBox;
 import buttonBox.DeckShopBox;
 import buttonBox.DuelWinLossBox;
 import buttonBox.PackShopBox;
@@ -79,6 +80,9 @@ public class MenuBox extends JFrame {
 
 	class DeckEditListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
+			DeckEditBox frame = new DeckEditBox();
+			frame.setVisible(true);
+			frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 			dispose();
 		}
 	}

@@ -21,6 +21,20 @@ public class YGOReader {
 		return cardsInTrunk;
 	}
 
+	public static ArrayList<String> readMainDeck() {
+		ArrayList<String> cardsInDeck = new ArrayList<String>();
+		try {
+			FileReader reader = new FileReader("mainDeck.txt");
+			Scanner in = new Scanner(reader);
+			while (in.hasNextLine()) {
+				cardsInDeck.add(in.nextLine());
+			}
+		} catch (FileNotFoundException e) {
+			YGOWriter.writeDeck(cardsInDeck);
+		}
+		return cardsInDeck;
+	}
+
 	public static ArrayList<Integer> readStats() {
 		ArrayList<Integer> stats = new ArrayList<Integer>();
 		try {

@@ -19,6 +19,18 @@ public class YGOWriter {
 		}
 	}
 
+	public static void writeDeck(ArrayList<String> cardsInDeck) {
+		Collections.sort(cardsInDeck);
+		try {
+			PrintWriter deck = new PrintWriter("mainDeck.txt");
+			for (String s : cardsInDeck)
+				deck.println(s);
+			deck.close();
+		} catch (FileNotFoundException e) {
+			JOptionPane.showMessageDialog(null, "Deck Not Found, Writing", "ERROR", JOptionPane.ERROR_MESSAGE);
+		}
+	}
+
 	public static void writeStats(ArrayList<Integer> stats) {
 		try {
 			PrintWriter unlocked = new PrintWriter("stats.txt");
