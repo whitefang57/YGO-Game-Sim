@@ -6,16 +6,15 @@ import ygoUtil.YGOWriter;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.util.ArrayList;
 
 public class DeckEditBox extends JFrame {
 	private DefaultListModel<String> listModelTrunk;
 	private JList<String> listTrunk;
 	private DefaultListModel<String> listModelDeck;
+	private JButton moveToDeck;
+	private JButton moveToTrunk;
 	private JList<String> listDeck;
 	private ArrayList<String> cardsInDeck;
 
@@ -37,6 +36,7 @@ public class DeckEditBox extends JFrame {
 		listTrunk.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 		listTrunk.setLayoutOrientation(JList.VERTICAL);
 		listTrunk.setVisibleRowCount(1);
+		listTrunk.addMouseListener(new RightClickListener("listTrunk"));
 		panel.add(new JScrollPane(listTrunk), BorderLayout.WEST);
 
 		listModelDeck = new DefaultListModel<String>();
@@ -46,13 +46,14 @@ public class DeckEditBox extends JFrame {
 		listDeck.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 		listDeck.setLayoutOrientation(JList.VERTICAL);
 		listDeck.setVisibleRowCount(1);
+		listDeck.addMouseListener(new RightClickListener("listDeck"));
 		panel.add(new JScrollPane(listDeck), BorderLayout.EAST);
 
 		setSize((int) (listTrunk.getPreferredSize().getWidth() + listDeck.getPreferredSize().getWidth()) + 51, 600);
 
-		JButton moveToDeck = new JButton("Move to Deck");
+		moveToDeck = new JButton("Move to Deck");
 		moveToDeck.addActionListener(new MoveToDeckListener());
-		JButton moveToTrunk = new JButton("Move to Trunk");
+		moveToTrunk = new JButton("Move to Trunk");
 		moveToTrunk.addActionListener(new MoveToTrunkListener());
 
 		JPanel buttonPane = new JPanel();
@@ -83,6 +84,7 @@ public class DeckEditBox extends JFrame {
 				cardsInDeck.remove(i - cardsRemoved);
 				cardsRemoved++;
 			}
+			setSize((int) (listTrunk.getPreferredSize().getWidth() + listDeck.getPreferredSize().getWidth()) + 51, 600);
 		}
 	}
 
@@ -99,6 +101,30 @@ public class DeckEditBox extends JFrame {
 			YGOWriter.writeDeck(cardsInDeck);
 			for (String s : cardsInDeck)
 				listModelDeck.addElement(s);
+			setSize((int) (listTrunk.getPreferredSize().getWidth() + listDeck.getPreferredSize().getWidth()) + 51, 600);
+		}
+	}
+
+	class RightClickListener extends MouseAdapter {
+		private String listName;
+
+		public RightClickListener(String name) {
+			listName = name;
+		}
+
+		public void mouseClicked(MouseEvent e) {
+			if (SwingUtilities.isRightMouseButton(e)) {
+				if (listName.equals("listTrunk")) {
+					listTrunk.setSelectedIndex(listTrunk.locationToIndex(e.getPoint()));
+					moveToDeck.doClick();
+					listTrunk.clearSelection();
+				}
+				if (listName.equals("listDeck")) {
+					listDeck.setSelectedIndex(listDeck.locationToIndex(e.getPoint()));
+					moveToTrunk.doClick();
+					listDeck.clearSelection();
+				}
+			}
 		}
 	}
 }
