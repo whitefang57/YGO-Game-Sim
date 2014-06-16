@@ -28,7 +28,7 @@ public class PackShopBox extends JFrame {
 		cardsInTrunk = YGOReader.readTrunk();
 		statistics = YGOReader.readStats();
 		//0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses
-		packsUnlocked = statistics.get(0);
+		packsUnlocked = 9 + statistics.get(4) / 3;
 		duelPoints = statistics.get(2);
 
 		setTitle("Pick a Pack");
