@@ -37,7 +37,6 @@ public class DeckEditBox extends JFrame {
 		listTrunk.setLayoutOrientation(JList.VERTICAL);
 		listTrunk.setVisibleRowCount(1);
 		listTrunk.addMouseListener(new RightClickListener("listTrunk"));
-		panel.add(new JScrollPane(listTrunk), BorderLayout.WEST);
 
 		listModelDeck = new DefaultListModel<String>();
 		for (String s : cardsInDeck)
@@ -47,9 +46,12 @@ public class DeckEditBox extends JFrame {
 		listDeck.setLayoutOrientation(JList.VERTICAL);
 		listDeck.setVisibleRowCount(1);
 		listDeck.addMouseListener(new RightClickListener("listDeck"));
-		panel.add(new JScrollPane(listDeck), BorderLayout.EAST);
 
-		setSize((int) (listTrunk.getPreferredSize().getWidth() + listDeck.getPreferredSize().getWidth()) + 51, 600);
+		int width = (int) (2 * listTrunk.getPreferredSize().getWidth()) + 40;
+		setSize(width, 600);
+
+		panel.add(new JScrollPane(listTrunk), BorderLayout.WEST);
+		panel.add(new JScrollPane(listDeck), BorderLayout.EAST);
 
 		moveToDeck = new JButton("Move to Deck");
 		moveToDeck.addActionListener(new MoveToDeckListener());
@@ -84,7 +86,6 @@ public class DeckEditBox extends JFrame {
 				cardsInDeck.remove(i - cardsRemoved);
 				cardsRemoved++;
 			}
-			setSize((int) (listTrunk.getPreferredSize().getWidth() + listDeck.getPreferredSize().getWidth()) + 51, 600);
 		}
 	}
 
@@ -101,7 +102,10 @@ public class DeckEditBox extends JFrame {
 			YGOWriter.writeDeck(cardsInDeck);
 			for (String s : cardsInDeck)
 				listModelDeck.addElement(s);
-			setSize((int) (listTrunk.getPreferredSize().getWidth() + listDeck.getPreferredSize().getWidth()) + 51, 600);
+
+			int width = (int) (2 * listTrunk.getPreferredSize().getWidth()) + 40;
+			setSize(width + 1, 600);
+			setSize(width, 600);
 		}
 	}
 
