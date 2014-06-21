@@ -27,7 +27,8 @@ public class PackShopBox extends JFrame {
 		fullPackList = YGOReader.readPackList();
 		cardsInTrunk = YGOReader.readTrunk();
 		statistics = YGOReader.readStats();
-		//0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses
+		// 0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses,
+		// 5 is debugMode on or off (1 is on, 0 is off)
 		packsUnlocked = 9 + statistics.get(4) / 3;
 		duelPoints = statistics.get(2);
 
@@ -74,8 +75,13 @@ public class PackShopBox extends JFrame {
 		clean.setAlignmentX(JButton.CENTER_ALIGNMENT);
 		duelPointDisplay.setAlignmentX(JLabel.CENTER_ALIGNMENT);
 
-		add.setEnabled(packsUnlocked != fullPackList.size());
-		subtract.setEnabled(packsUnlocked > 0);
+		if (statistics.get(5) == 1) {
+			add.setEnabled(packsUnlocked != fullPackList.size());
+			subtract.setEnabled(packsUnlocked > 0);
+		} else {
+			add.setEnabled(false);
+			subtract.setEnabled(false);
+		}
 		numberOfPacks.setPreferredSize(new Dimension(25, 25));
 
 		JPanel buttonPaneOne = new JPanel();

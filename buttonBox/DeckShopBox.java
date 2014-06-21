@@ -26,7 +26,8 @@ public class DeckShopBox extends JFrame {
 		deckList = YGOReader.readDeckList();
 		cardsInTrunk = YGOReader.readTrunk();
 		statistics = YGOReader.readStats();
-		//0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses
+		// 0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses,
+		// 5 is debugMode on or off (1 is on, 0 is off)
 		decksUnlocked = PacksUnlockedToDecksUnlocked.swap(statistics.get(0));
 		statistics.set(1, decksUnlocked);
 		duelPoints = statistics.get(2);
@@ -65,8 +66,13 @@ public class DeckShopBox extends JFrame {
 		subtract.addActionListener(new UnlockListener(subtract));
 		clean.addActionListener(new CleanListener());
 
-		add.setEnabled(decksUnlocked != deckList.size());
-		subtract.setEnabled(decksUnlocked > 0);
+		if (statistics.get(5) == 1) {
+			add.setEnabled(decksUnlocked != deckList.size());
+			subtract.setEnabled(decksUnlocked > 0);
+		} else {
+			add.setEnabled(false);
+			subtract.setEnabled(false);
+		}
 
 		JPanel buttonPaneOne = new JPanel();
 

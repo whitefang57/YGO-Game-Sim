@@ -1,9 +1,6 @@
 package mainMenu;
 
-import buttonBox.DeckEditBox;
-import buttonBox.DeckShopBox;
-import buttonBox.DuelWinLossBox;
-import buttonBox.PackShopBox;
+import buttonBox.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -107,6 +104,9 @@ public class MenuBox extends JFrame {
 
 	class OptionsListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
+			OptionsBox frame = new OptionsBox();
+			frame.setVisible(true);
+			frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 			dispose();
 		}
 	}

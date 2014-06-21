@@ -17,7 +17,8 @@ public class DuelWinLossBox extends JFrame {
 
 	public DuelWinLossBox() {
 		statistics = YGOReader.readStats();
-		//0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses
+		// 0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses,
+		// 5 is debugMode on or off (1 is on, 0 is off)
 
 		setTitle("Win or Loss?");
 		setSize(250, 110);
