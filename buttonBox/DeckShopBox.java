@@ -116,22 +116,22 @@ public class DeckShopBox extends JFrame {
 				JOptionPane.showMessageDialog(null, "Please Select a Deck", "ERROR", JOptionPane.WARNING_MESSAGE);
 				return;
 			}
-
-			if (1500 > duelPoints) {
+			if (1500 > duelPoints && statistics.get(5) == 0) {
 				JOptionPane.showMessageDialog(null, "Not Enough DP", "ERROR",
 						JOptionPane.WARNING_MESSAGE);
 			} else {
 				for (String s : YGOReader.readPack(deckList.get(list.getSelectedIndex()))) {
 					cardsInTrunk.add(s);
 				}
-
 				list.clearSelection();
-				duelPoints -= 1500;
-				statistics.set(2, duelPoints);
-				YGOWriter.writeStats(statistics);
-				duelPointDisplay.setText("DP: " + duelPoints);
+				if (statistics.get(5) == 0) {
+					duelPoints -= 1500;
+					statistics.set(2, duelPoints);
+					YGOWriter.writeStats(statistics);
+					duelPointDisplay.setText("DP: " + duelPoints);
+					YGOWriter.writeTrunk(cardsInTrunk);
+				}
 				JOptionPane.showMessageDialog(null, "Cards added to trunk", "", JOptionPane.INFORMATION_MESSAGE);
-				YGOWriter.writeTrunk(cardsInTrunk);
 			}
 		}
 	}
@@ -147,7 +147,7 @@ public class DeckShopBox extends JFrame {
 			if (type.equals("+") && decksUnlocked < deckList.size()) {
 				decksUnlocked++;
 				statistics.set(1, decksUnlocked);
-				YGOWriter.writeStats(statistics);
+				//YGOWriter.writeStats(statistics);
 				listModel.insertElementAt(deckList.get(decksUnlocked - 1), decksUnlocked - 1);
 				list.setSelectedIndex(decksUnlocked - 1);
 				list.ensureIndexIsVisible(decksUnlocked - 1);
@@ -156,7 +156,7 @@ public class DeckShopBox extends JFrame {
 			if (type.equals("-") && decksUnlocked > 0) {
 				decksUnlocked--;
 				statistics.set(1, decksUnlocked);
-				YGOWriter.writeStats(statistics);
+				//YGOWriter.writeStats(statistics);
 				listModel.remove(decksUnlocked);
 				list.setSelectedIndex(decksUnlocked - 1);
 				list.ensureIndexIsVisible(decksUnlocked - 1);

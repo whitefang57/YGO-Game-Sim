@@ -147,14 +147,16 @@ public class PackShopBox extends JFrame {
 					return;
 				}
 			}
-			if (packsToOpen * 150 > duelPoints) {
+			if (packsToOpen * 150 > duelPoints && statistics.get(5) == 0) {
 				JOptionPane.showMessageDialog(null, "Not Enough DP", "ERROR",
 						JOptionPane.WARNING_MESSAGE);
 			} else {
-				duelPoints -= packsToOpen * 150;
-				statistics.set(2, duelPoints);
-				YGOWriter.writeStats(statistics);
-				duelPointDisplay.setText("DP: " + duelPoints);
+				if (statistics.get(5) == 0) {
+					duelPoints -= packsToOpen * 150;
+					statistics.set(2, duelPoints);
+					YGOWriter.writeStats(statistics);
+					duelPointDisplay.setText("DP: " + duelPoints);
+				}
 
 				ArrayList<String> commonCards = new ArrayList<String>();
 				ArrayList<String> rareCards = new ArrayList<String>();
@@ -187,8 +189,8 @@ public class PackShopBox extends JFrame {
 					}
 				}
 			}
-
-			YGOWriter.writeTrunk(cardsInTrunk);
+			if (statistics.get(5) == 0)
+				YGOWriter.writeTrunk(cardsInTrunk);
 		}
 	}
 
@@ -203,7 +205,7 @@ public class PackShopBox extends JFrame {
 			if (type.equals("+") && packsUnlocked < fullPackList.size()) {
 				packsUnlocked++;
 				statistics.set(0, packsUnlocked);
-				YGOWriter.writeStats(statistics);
+				//YGOWriter.writeStats(statistics);
 				listModel.insertElementAt(fullPackList.get(packsUnlocked - 1), packsUnlocked - 1);
 				list.setSelectedIndex(packsUnlocked - 1);
 				list.ensureIndexIsVisible(packsUnlocked - 1);
@@ -213,7 +215,7 @@ public class PackShopBox extends JFrame {
 				packsUnlocked--;
 				statistics.remove(0);
 				statistics.add(0, packsUnlocked);
-				YGOWriter.writeStats(statistics);
+				//YGOWriter.writeStats(statistics);
 				listModel.remove(packsUnlocked);
 				list.setSelectedIndex(packsUnlocked - 1);
 				list.ensureIndexIsVisible(packsUnlocked - 1);

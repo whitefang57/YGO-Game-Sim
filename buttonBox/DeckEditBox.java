@@ -48,6 +48,7 @@ public class DeckEditBox extends JFrame {
 		listDeck.addMouseListener(new RightClickListener("listDeck"));
 
 		int width = (int) (2 * listTrunk.getPreferredSize().getWidth()) + 60;
+		if (width < 300) width = 300;
 		setSize(width, 600);
 
 		panel.add(new JScrollPane(listTrunk), BorderLayout.WEST);
