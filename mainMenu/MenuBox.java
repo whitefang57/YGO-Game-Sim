@@ -1,7 +1,7 @@
 package mainMenu;
 
 import buttonBox.*;
-import ygoUtil.YGOReader;
+import ygoUtil.XMLHandler;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +24,7 @@ public class MenuBox extends JFrame {
 		JButton shopDecksButton = new JButton("Shop Decks");
 		JButton configButton = new JButton("Options");
 		JButton quitButton = new JButton("Quit");
-		JLabel versionNumber = new JLabel("Version: " + YGOReader.readStats().get(6));
+		JLabel versionNumber = new JLabel("Version: " + XMLHandler.readResources().getVersionNumber());
 
 		duelButton.addActionListener(new DuelListener());
 		deckEditButton.addActionListener(new DeckEditListener());

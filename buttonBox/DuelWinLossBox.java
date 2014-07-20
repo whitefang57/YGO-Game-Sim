@@ -1,8 +1,8 @@
 package buttonBox;
 
 import mainMenu.MenuBox;
-import ygoUtil.YGOReader;
-import ygoUtil.YGOWriter;
+import ygoUtil.XMLHandler;
+import ygoUtil.YGOResource;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,15 +10,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.ArrayList;
 
 public class DuelWinLossBox extends JFrame {
-	private ArrayList<Integer> statistics;
+	private YGOResource resources;
 
 	public DuelWinLossBox() {
-		statistics = YGOReader.readStats();
-		// 0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses,
-		// 5 is debugMode on or off (1 is on, 0 is off)
+		resources = XMLHandler.readResources();
 
 		setTitle("Win or Loss?");
 		setSize(250, 110);
@@ -66,15 +63,15 @@ public class DuelWinLossBox extends JFrame {
 
 		public void actionPerformed(ActionEvent e) {
 			if (buttonName.equals("Win")) {
-				statistics.set(3, statistics.get(3) + 1);
-				statistics.set(2, statistics.get(2) + 600);
+				resources.setWins(resources.getWins() + 1);
+				resources.setTotalDuelPoints(resources.getTotalDuelPoints() + 600);
 				JOptionPane.showMessageDialog(null, "You Gained 600 DP", "", JOptionPane.INFORMATION_MESSAGE);
 			} else if (buttonName.equals("Loss")) {
-				statistics.set(4, statistics.get(4) + 1);
-				statistics.set(2, statistics.get(2) + 750);
+				resources.setLosses(resources.getLosses() + 1);
+				resources.setTotalDuelPoints(resources.getTotalDuelPoints() + 750);
 				JOptionPane.showMessageDialog(null, "You Gained 750 DP", "", JOptionPane.INFORMATION_MESSAGE);
 			}
-			YGOWriter.writeStats(statistics);
+			XMLHandler.writeResources(resources);
 
 			MenuBox frame = new MenuBox();
 			frame.setVisible(true);

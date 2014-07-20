@@ -1,7 +1,9 @@
 package buttonBox;
 
 import mainMenu.MenuBox;
+import ygoUtil.XMLHandler;
 import ygoUtil.YGOReader;
+import ygoUtil.YGOResource;
 import ygoUtil.YGOWriter;
 
 import javax.swing.*;
@@ -15,7 +17,7 @@ public class PackShopBox extends JFrame {
 	private JTextField numberOfPacks;
 	private ArrayList<String> fullPackList;
 	private ArrayList<String> cardsInTrunk;
-	private ArrayList<Integer> statistics;
+	private YGOResource resources;
 	private int packsUnlocked;
 	private JButton add;
 	private JButton subtract;
@@ -26,11 +28,9 @@ public class PackShopBox extends JFrame {
 	public PackShopBox() {
 		fullPackList = YGOReader.readPackList();
 		cardsInTrunk = YGOReader.readTrunk();
-		statistics = YGOReader.readStats();
-		// 0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses,
-		// 5 is debugMode on or off (1 is on, 0 is off)
-		packsUnlocked = 9 + statistics.get(4) / 3;
-		duelPoints = statistics.get(2);
+		resources = XMLHandler.readResources();
+		packsUnlocked = 9 + resources.getLosses() / 3;
+		duelPoints = resources.getTotalDuelPoints();
 
 		setTitle("Pick a Pack");
 		setSize(300, 400);
@@ -75,7 +75,7 @@ public class PackShopBox extends JFrame {
 		clean.setAlignmentX(JButton.CENTER_ALIGNMENT);
 		duelPointDisplay.setAlignmentX(JLabel.CENTER_ALIGNMENT);
 
-		if (statistics.get(5) == 1) {
+		if (resources.getDebugMode() == 1) {
 			add.setEnabled(packsUnlocked != fullPackList.size());
 			subtract.setEnabled(packsUnlocked > 0);
 		} else {
@@ -147,14 +147,14 @@ public class PackShopBox extends JFrame {
 					return;
 				}
 			}
-			if (packsToOpen * 150 > duelPoints && statistics.get(5) == 0) {
+			if (packsToOpen * 150 > duelPoints && resources.getDebugMode() == 0) {
 				JOptionPane.showMessageDialog(null, "Not Enough DP", "ERROR",
 						JOptionPane.WARNING_MESSAGE);
 			} else {
-				if (statistics.get(5) == 0) {
+				if (resources.getDebugMode() == 0) {
 					duelPoints -= packsToOpen * 150;
-					statistics.set(2, duelPoints);
-					YGOWriter.writeStats(statistics);
+					resources.setTotalDuelPoints(duelPoints);
+					XMLHandler.writeResources(resources);
 					duelPointDisplay.setText("DP: " + duelPoints);
 				}
 
@@ -189,7 +189,7 @@ public class PackShopBox extends JFrame {
 					}
 				}
 			}
-			if (statistics.get(5) == 0)
+			if (resources.getDebugMode() == 0)
 				YGOWriter.writeTrunk(cardsInTrunk);
 		}
 	}
@@ -204,8 +204,7 @@ public class PackShopBox extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			if (type.equals("+") && packsUnlocked < fullPackList.size()) {
 				packsUnlocked++;
-				statistics.set(0, packsUnlocked);
-				//YGOWriter.writeStats(statistics);
+				resources.setUnlockedPacks(packsUnlocked);
 				listModel.insertElementAt(fullPackList.get(packsUnlocked - 1), packsUnlocked - 1);
 				list.setSelectedIndex(packsUnlocked - 1);
 				list.ensureIndexIsVisible(packsUnlocked - 1);
@@ -213,9 +212,7 @@ public class PackShopBox extends JFrame {
 
 			if (type.equals("-") && packsUnlocked > 0) {
 				packsUnlocked--;
-				statistics.remove(0);
-				statistics.add(0, packsUnlocked);
-				//YGOWriter.writeStats(statistics);
+				resources.setUnlockedPacks(packsUnlocked);
 				listModel.remove(packsUnlocked);
 				list.setSelectedIndex(packsUnlocked - 1);
 				list.ensureIndexIsVisible(packsUnlocked - 1);
@@ -241,9 +238,9 @@ public class PackShopBox extends JFrame {
 			duelPoints += cardsRemoved * 20;
 			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved * 20 + " DP", "DP Earned",
 					JOptionPane.INFORMATION_MESSAGE);
-			statistics.set(2, duelPoints);
+			resources.setTotalDuelPoints(duelPoints);
 			duelPointDisplay.setText("DP: " + duelPoints);
-			YGOWriter.writeStats(statistics);
+			XMLHandler.writeResources(resources);
 		}
 	}
 }

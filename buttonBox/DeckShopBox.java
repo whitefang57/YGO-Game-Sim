@@ -1,7 +1,9 @@
 package buttonBox;
 
 import mainMenu.MenuBox;
+import ygoUtil.XMLHandler;
 import ygoUtil.YGOReader;
+import ygoUtil.YGOResource;
 import ygoUtil.YGOWriter;
 
 import javax.swing.*;
@@ -14,7 +16,7 @@ public class DeckShopBox extends JFrame {
 	private JList<String> list;
 	private ArrayList<String> deckList;
 	private ArrayList<String> cardsInTrunk;
-	private ArrayList<Integer> statistics;
+	private YGOResource resources;
 	private int decksUnlocked;
 	private JButton add;
 	private JButton subtract;
@@ -25,12 +27,10 @@ public class DeckShopBox extends JFrame {
 	public DeckShopBox() {
 		deckList = YGOReader.readDeckList();
 		cardsInTrunk = YGOReader.readTrunk();
-		statistics = YGOReader.readStats();
-		// 0 is unlocked packs, 1 is unlocked decks, 2 is total dp, 3 is wins, 4 is losses,
-		// 5 is debugMode on or off (1 is on, 0 is off)
-		decksUnlocked = PacksUnlockedToDecksUnlocked.swap(statistics.get(0));
-		statistics.set(1, decksUnlocked);
-		duelPoints = statistics.get(2);
+		resources = XMLHandler.readResources();
+		decksUnlocked = PacksUnlockedToDecksUnlocked.swap(resources.getUnlockedPacks());
+		resources.setUnlockedDecks(decksUnlocked);
+		duelPoints = resources.getTotalDuelPoints();
 
 		setTitle("Pick a Pack");
 		setSize(300, 400);
@@ -66,7 +66,7 @@ public class DeckShopBox extends JFrame {
 		subtract.addActionListener(new UnlockListener(subtract));
 		clean.addActionListener(new CleanListener());
 
-		if (statistics.get(5) == 1) {
+		if (resources.getDebugMode() == 1) {
 			add.setEnabled(decksUnlocked != deckList.size());
 			subtract.setEnabled(decksUnlocked > 0);
 		} else {
@@ -91,7 +91,7 @@ public class DeckShopBox extends JFrame {
 		buttonPaneTwo.add(duelPointDisplay);
 
 		panel.add(buttonPaneTwo, BorderLayout.PAGE_START);
-		YGOWriter.writeStats(statistics);
+		XMLHandler.writeResources(resources);
 
 		addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
@@ -116,7 +116,7 @@ public class DeckShopBox extends JFrame {
 				JOptionPane.showMessageDialog(null, "Please Select a Deck", "ERROR", JOptionPane.WARNING_MESSAGE);
 				return;
 			}
-			if (1500 > duelPoints && statistics.get(5) == 0) {
+			if (1500 > duelPoints && resources.getDebugMode() == 0) {
 				JOptionPane.showMessageDialog(null, "Not Enough DP", "ERROR",
 						JOptionPane.WARNING_MESSAGE);
 			} else {
@@ -124,10 +124,10 @@ public class DeckShopBox extends JFrame {
 					cardsInTrunk.add(s);
 				}
 				list.clearSelection();
-				if (statistics.get(5) == 0) {
+				if (resources.getDebugMode() == 0) {
 					duelPoints -= 1500;
-					statistics.set(2, duelPoints);
-					YGOWriter.writeStats(statistics);
+					resources.setTotalDuelPoints(duelPoints);
+					XMLHandler.writeResources(resources);
 					duelPointDisplay.setText("DP: " + duelPoints);
 					YGOWriter.writeTrunk(cardsInTrunk);
 				}
@@ -146,8 +146,6 @@ public class DeckShopBox extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			if (type.equals("+") && decksUnlocked < deckList.size()) {
 				decksUnlocked++;
-				statistics.set(1, decksUnlocked);
-				//YGOWriter.writeStats(statistics);
 				listModel.insertElementAt(deckList.get(decksUnlocked - 1), decksUnlocked - 1);
 				list.setSelectedIndex(decksUnlocked - 1);
 				list.ensureIndexIsVisible(decksUnlocked - 1);
@@ -155,8 +153,6 @@ public class DeckShopBox extends JFrame {
 
 			if (type.equals("-") && decksUnlocked > 0) {
 				decksUnlocked--;
-				statistics.set(1, decksUnlocked);
-				//YGOWriter.writeStats(statistics);
 				listModel.remove(decksUnlocked);
 				list.setSelectedIndex(decksUnlocked - 1);
 				list.ensureIndexIsVisible(decksUnlocked - 1);
@@ -182,9 +178,9 @@ public class DeckShopBox extends JFrame {
 			duelPoints += cardsRemoved * 20;
 			JOptionPane.showMessageDialog(null, "You gained " + cardsRemoved * 20 + " DP", "DP Earned",
 					JOptionPane.INFORMATION_MESSAGE);
-			statistics.set(2, duelPoints);
+			resources.setTotalDuelPoints(duelPoints);
 			duelPointDisplay.setText("DP: " + duelPoints);
-			YGOWriter.writeStats(statistics);
+			XMLHandler.writeResources(resources);
 		}
 	}
 

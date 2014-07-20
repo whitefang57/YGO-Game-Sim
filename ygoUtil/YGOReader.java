@@ -35,22 +35,6 @@ public class YGOReader {
 		return cardsInDeck;
 	}
 
-	public static ArrayList<Integer> readStats() {
-		ArrayList<Integer> stats = new ArrayList<Integer>();
-		try {
-			FileReader reader = new FileReader("stats.txt");
-			Scanner in = new Scanner(reader);
-			while (in.hasNextLine()) {
-				stats.add(in.nextInt());
-			}
-		} catch (FileNotFoundException e) {
-			ArrayList<Integer> statistics = new ArrayList<Integer>();
-			statistics.add(0);
-			YGOWriter.writeStats(statistics);
-		}
-		return stats;
-	}
-
 	public static ArrayList<String> readPackList() {
 		ArrayList<String> packList = new ArrayList<String>();
 		try {
