@@ -2,9 +2,9 @@
 <resources>
   <unlockedPacks>9</unlockedPacks>
   <unlockedDecks>4</unlockedDecks>
-  <totalDuelPoints>600</totalDuelPoints>
+  <totalDuelPoints>0</totalDuelPoints>
   <wins>1</wins>
   <losses>0</losses>
   <debugMode>0</debugMode>
-  <versionNumber>43</versionNumber>
+  <versionNumber>44</versionNumber>
 </resources>

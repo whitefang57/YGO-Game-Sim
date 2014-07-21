@@ -1,7 +1,6 @@
 package mainMenu;
 
 import buttonBox.*;
-import ygoUtil.XMLHandler;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +23,6 @@ public class MenuBox extends JFrame {
 		JButton shopDecksButton = new JButton("Shop Decks");
 		JButton configButton = new JButton("Options");
 		JButton quitButton = new JButton("Quit");
-		JLabel versionNumber = new JLabel("Version: " + XMLHandler.readResources().getVersionNumber());
 
 		duelButton.addActionListener(new DuelListener());
 		deckEditButton.addActionListener(new DeckEditListener());
@@ -40,7 +38,6 @@ public class MenuBox extends JFrame {
 		deckEditButton.setAlignmentX(JButton.LEFT_ALIGNMENT);
 		shopDecksButton.setAlignmentX(JButton.LEFT_ALIGNMENT);
 		quitButton.setAlignmentX(JButton.LEFT_ALIGNMENT);
-		versionNumber.setAlignmentX(JLabel.RIGHT_ALIGNMENT);
 
 		JPanel buttonPaneTop = new JPanel();
 		buttonPaneTop.setLayout(new BoxLayout(buttonPaneTop, BoxLayout.Y_AXIS));
@@ -67,11 +64,6 @@ public class MenuBox extends JFrame {
 		buttonPaneRight.add(quitButton);
 		buttonPaneRight.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 		panel.add(buttonPaneRight, BorderLayout.LINE_END);
-
-		JPanel buttonPaneBottom = new JPanel();
-		buttonPaneBottom.setLayout(new BoxLayout(buttonPaneBottom, BoxLayout.Y_AXIS));
-		buttonPaneBottom.add(versionNumber);
-		panel.add(buttonPaneBottom, BorderLayout.PAGE_END);
 	}
 
 	class DuelListener implements ActionListener {

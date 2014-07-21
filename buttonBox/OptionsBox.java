@@ -32,6 +32,13 @@ public class OptionsBox extends JFrame {
 
 		panel.add(checkboxes, BorderLayout.CENTER);
 
+		JPanel buttonPaneBottom = new JPanel();
+		JLabel versionNumber = new JLabel("Version: " + resources.getVersionNumber());
+		versionNumber.setAlignmentX(JLabel.RIGHT_ALIGNMENT);
+		buttonPaneBottom.setLayout(new BoxLayout(buttonPaneBottom, BoxLayout.Y_AXIS));
+		buttonPaneBottom.add(versionNumber);
+		panel.add(buttonPaneBottom, BorderLayout.PAGE_END);
+
 		addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
 				MenuBox frame = new MenuBox();
